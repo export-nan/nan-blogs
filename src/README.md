@@ -14,16 +14,23 @@ projects:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 235fe45 (Docs (#3))
   - name: chatgpt-api 脚本
     desc: 基于chatgpt-api接入的Dos脚本
 =======
   - name: chatgpt-api 脚步
     desc: 基于chatgpt-api接入的Dos脚步
+<<<<<<< HEAD
 >>>>>>> 4c3bda3 (demo: chatgpt-script)
 =======
   - name: chatgpt-api 脚本
     desc: 基于chatgpt-api接入的Dos脚本
 >>>>>>> f9bdf1c (demo: chatgpt-script)
+=======
+>>>>>>> e12c383 (Docs (#3))
+>>>>>>> 235fe45 (Docs (#3))
     link: https://github.com/export-nan/chatgpt-script
 
 footer: 这里是页脚 _(:з」∠)_
