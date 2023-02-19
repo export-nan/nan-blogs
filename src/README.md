@@ -10,12 +10,11 @@ heroFullScreen: true
 # tagline:
 
 # 这里可以放一些链接
-# projects:
+projects:
 
-#   - icon: /logo.svg
-#     name: 自定义项目
-#     desc: 自定义详细介绍
-#     link: https://你的自定义链接
+  - name: chatgpt-api 脚步
+    desc: 基于chatgpt-api接入的Dos脚步
+    link: https://github.com/export-nan/chatgpt-script
 
 footer: 这里是页脚 _(:з」∠)_
 ---
