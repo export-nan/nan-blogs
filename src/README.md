@@ -13,12 +13,17 @@ tagline: 逆境能给一个人丰富并锻炼自己的机会
 projects:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   - name: chatgpt-api 脚本
     desc: 基于chatgpt-api接入的Dos脚本
 =======
   - name: chatgpt-api 脚步
     desc: 基于chatgpt-api接入的Dos脚步
 >>>>>>> 4c3bda3 (demo: chatgpt-script)
+=======
+  - name: chatgpt-api 脚本
+    desc: 基于chatgpt-api接入的Dos脚本
+>>>>>>> f9bdf1c (demo: chatgpt-script)
     link: https://github.com/export-nan/chatgpt-script
 
 footer: 这里是页脚 _(:з」∠)_
