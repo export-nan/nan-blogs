@@ -7,7 +7,7 @@ title: 主页
 heroText: NAN的个人博客
 bgImage: /banner.jpg
 heroFullScreen: true
-# tagline:
+tagline: 逆境能给一个人丰富并锻炼自己的机会
 
 # 这里可以放一些链接
 projects:
