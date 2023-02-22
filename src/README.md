@@ -7,13 +7,13 @@ title: 主页
 heroText: NAN的个人博客
 bgImage: /banner.jpg
 heroFullScreen: true
-# tagline:
+tagline: 逆境能给一个人丰富并锻炼自己的机会
 
 # 这里可以放一些链接
 projects:
 
-  - name: chatgpt-api 脚步
-    desc: 基于chatgpt-api接入的Dos脚步
+  - name: chatgpt-api 脚本
+    desc: 基于chatgpt-api接入的Dos脚本
     link: https://github.com/export-nan/chatgpt-script
 
 footer: 这里是页脚 _(:з」∠)_
