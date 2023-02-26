@@ -5,7 +5,7 @@ icon: home
 title: 主页
 # heroImage: /logo.svg
 heroText: NAN的个人博客
-bgImage: /banner.jpg
+bgImage: /banner-2023-02-27.webp
 heroFullScreen: true
 tagline: 逆境能给一个人丰富并锻炼自己的机会
 
