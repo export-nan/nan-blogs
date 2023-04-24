@@ -67,7 +67,7 @@ star: true
 - [x] 建站
 
 ## 源码地址
-Github URl: [*https://github.com/export-nan/nan-blogs*](https://github.com/export-nan/export-nan.github.io)
+Github URl: [*https://github.com/export-nan/nan-blogs*](https://github.com/export-nan/nan-blogs)
 
 ## 技术栈相关
 vuepress: [https://v2.vuepress.vuejs.org/zh/](https://v2.vuepress.vuejs.org/zh/)
