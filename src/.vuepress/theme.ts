@@ -12,7 +12,7 @@ export default hopeTheme({
 
   iconAssets: "iconfont",
 
-  repo: "export-nan/export-nan.github.io",
+  repo: "export-nan/nan-blogs",
 
   docsBranch: "docs",
 
@@ -47,10 +47,10 @@ export default hopeTheme({
 
     comment: {
       provider: "Giscus",
-      repo: "export-nan/export-nan.github.io",
-      repoId: "R_kgDOI88Xtg",
-      category: "Announcements",
-      categoryId: "DIC_kwDOI88Xts4CUNSZ",
+      repo: "export-nan/nan-blogs",
+      repoId: "R_kgDOI-_szw",
+      category: "General",
+      categoryId: "DIC_kwDOI-_sz84CWS9I",
     },
 
     // all features are enabled for demo, only preserve features you need here
