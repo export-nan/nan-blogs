@@ -1,6 +1,6 @@
 ---
 title: 线性代数
-order: 1
+order: -1
 category:
   - graphics
 ---
@@ -161,12 +161,12 @@ $$
   = 
   \begin{pmatrix}x+xt_x\\ y+yt_y \\ w^2\end{pmatrix}
 $$
-当$ w \neq 0 $时这是点坐标
+当$w \neq 0$时这是点坐标
 $$
 P = \begin{pmatrix}x / w & y / w & 1 \end{pmatrix}
 $$
 
-当$ w = 0$时这是向量
+当$w = 0$时这是向量
 $$
 V = \begin{pmatrix}x & y & 0 \end{pmatrix}
 $$
@@ -241,6 +241,32 @@ $$
   cos\theta & -sin\theta & 0 & 0 \\ 
   sin\theta & cos\theta & 0 & 0 \\ 
   0 & 0 & 1 & 0\\ 
-  0 & 0 & 0 &1
+  0 & 0 & 0 & 1
   \end{pmatrix}
+$$
+
+## 罗德里格斯公式
+$$
+R(n,\alpha)=
+cos(\alpha)I + 
+(1-cos(\alpha))nn^T +
+sin(\alpha)N
+$$
+其中
+$$
+n = 旋转的轴向量（过原点）
+\qquad
+\alpha = 旋转的角度
+$$
+$$
+n^T = n的转置
+\qquad
+N = 
+\begin{pmatrix}
+  0 & -n_z & n_y \\
+  n_z & 0 & -n_x \\
+  -n_y & n_x & 0
+\end{pmatrix}
+\qquad
+I = 单位矩阵
 $$
