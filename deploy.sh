@@ -1,9 +1,11 @@
+# docker system prune -f
+
 docker stop nan-blogs
 
 docker rm nan-blogs
 
 docker rmi nan-blogs
 
-docker system prune
+docker build -t nan-blogs .
 
-docker-compose up
+docker run -p 80:80 -d --name nan-blogs nan-blogs
