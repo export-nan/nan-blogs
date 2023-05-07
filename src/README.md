@@ -17,6 +17,7 @@ projects:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 235fe45 (Docs (#3))
 =======
@@ -43,6 +44,10 @@ projects:
 =======
 >>>>>>> e12c383 (Docs (#3))
 >>>>>>> 8bfcf36 (Docs (#3))
+=======
+  - name: chatgpt-api 脚本
+    desc: 基于chatgpt-api接入的Dos脚本
+>>>>>>> f312f14 (解决冲突)
     link: https://github.com/export-nan/chatgpt-script
 
 footer: 这里是页脚 _(:з」∠)_
