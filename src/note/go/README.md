@@ -1,5 +1,6 @@
 ---
 title: Golang 学习笔记
+order: 0
 category:
   - GO
 ---
