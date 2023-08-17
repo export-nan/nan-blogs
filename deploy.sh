@@ -1,4 +1,4 @@
-# docker system prune -f
+docker system prune -f
 
 docker stop nan-blogs
 
