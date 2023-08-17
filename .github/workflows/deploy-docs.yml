@@ -55,7 +55,7 @@ jobs:
       with:
         context: .
         file: ./.github/workflows/asset/Dockerfile
-        platforms: linux/amd64,linux/arm64/v8
+        platforms: linux/amd64
         push: true
         tags: |
           ${{ env.IMAGE_NAME }}:latest
