@@ -1,4 +1,9 @@
+FROM workspace as pruned
+WORKDIR /app
+COPY 。 。
+
+
 FROM nginx
 WORKDIR /app
-COPY  /app/nginx.conf /etc/nginx/conf.d/nan-blogs.conf
-COPY  /app/src/.vuepress/dist /usr/share/nginx/html/nan-blogs
+COPY  --from=pruned /app/nginx.conf /etc/nginx/conf.d/nan-blogs.conf
+COPY  --from=pruned /app/src/.vuepress/dist /usr/share/nginx/html/nan-blogs
