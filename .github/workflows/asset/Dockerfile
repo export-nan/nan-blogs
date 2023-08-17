@@ -1,4 +1,4 @@
-FROM workspace as pruned
+FROM nginx as pruned
 WORKDIR /app
 COPY 。 。
 
