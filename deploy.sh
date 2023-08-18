@@ -2,7 +2,7 @@ docker stop nan-blogs
 
 docker rm nan-blogs
 
-docker rmi nan-blogs
+docker rmi nan47/nan-blogs
 
 docker pull nan47/nan-blogs
 
