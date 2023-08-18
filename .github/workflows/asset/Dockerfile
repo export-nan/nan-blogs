@@ -1,6 +1,6 @@
 FROM nginx as pruned
 WORKDIR /app
-COPY 。 。
+COPY . .
 
 
 FROM nginx
