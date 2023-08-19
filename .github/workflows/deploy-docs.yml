@@ -65,3 +65,12 @@ jobs:
         push: true
         tags: |
           ${{ env.IMAGE_NAME }}:latest
+
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.ALIYUN_HOST }}
+        username: ${{ secrets.ALIYUN_USERNAME }}
+        key: ${{ secrets.ALIYUN_KEY }}
+        port: ${{ secrets.ALIYUN_PORT }}
+        script: bash -c "curl -sL https://raw.githubusercontent.com/export-nan/nan-blogs/main/deploy.sh | bash"
