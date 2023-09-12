@@ -8,3 +8,4 @@ category:
 ## 目录
 [线性代数](./linearAlgebra.md)  
 [观测变换](./viewing.md)
+[视口与光栅化](./rasteriz.md)

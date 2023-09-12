@@ -1,5 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
+import { path } from "@vuepress/utils";
+
 
 export default defineUserConfig({
   base: "/",
@@ -9,4 +11,8 @@ export default defineUserConfig({
   theme,
 
   shouldPrefetch: false,
+
+  alias: {
+    "@webgl": path.resolve(__dirname, "components/webgl/index.vue"),
+  },
 });

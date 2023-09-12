@@ -11,5 +11,10 @@ export const Navbar = navbar([
         text: "建站日志",
         icon: "any",
         link: "/site-log/"
+    },
+    {
+        text: "其他",
+        icon: "any",
+        link: "/other/"
     }
 ]);
