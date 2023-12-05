@@ -20,7 +20,7 @@ export default hopeTheme({
 
   blog: {
     name: 'NAN',
-    avatar: '/avatar.jpg',
+    avatar: '/avatar.JPG',
     description: "一个前端开发者",
     intro: "/intro.html",
     roundAvatar: true,
