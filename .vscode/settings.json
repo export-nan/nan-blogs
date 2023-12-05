@@ -2,7 +2,7 @@
   "editor.tabSize": 2,
   "files.exclude": {
     "**/.DS_Store": true,
-    "**/.git": false,
+    "**/.git": true,
     "**/.hg": true,
     "**/.svn": true,
     "**/CVS": true,
