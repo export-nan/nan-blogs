@@ -1,0 +1,3 @@
+actions:
+  # 允许所有 actions
+  - '*'
