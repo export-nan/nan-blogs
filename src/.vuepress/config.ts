@@ -11,8 +11,4 @@ export default defineUserConfig({
   theme,
 
   shouldPrefetch: false,
-
-  alias: {
-    "@webgl": path.resolve(__dirname, "components/webgl/index.vue"),
-  },
 });
