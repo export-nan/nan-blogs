@@ -1,6 +1,6 @@
 ---
 title: 关键字与标识符
-order: -4
+order: 4
 category:
   - GO
 ---

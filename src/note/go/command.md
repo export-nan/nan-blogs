@@ -1,6 +1,6 @@
 ---
 title: GO的基本命令
-order: -2
+order: 2
 category:
   - GO
 ---

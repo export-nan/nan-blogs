@@ -1,6 +1,6 @@
 ---
 title: 安装与环境配置
-order: -1
+order: 1
 category:
   - GO
 ---
