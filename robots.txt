@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://github.com/export-nan/nan-blogs/sitemap.xml
+Sitemap: https://export-nan.github.io/nan-blogs/nan-blogs/sitemap.xml
