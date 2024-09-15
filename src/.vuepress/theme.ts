@@ -3,11 +3,11 @@ import { Navbar } from "./navbar.js";
 import { Sidebar } from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://github.com/export-nan",
+  hostname: "https://export-nan.github.io/nan-blogs/",
 
   author: {
     name: "NAN",
-    url: "https://github.com/export-nan",
+    url: "https://github.com/open-nan",
   },
 
   iconAssets: "iconfont",
