@@ -8,5 +8,3 @@ src/.vuepress/dist/
 *.test.*
 **/test
 pnpm-lock.yaml
-
-src/note/harmonyos
