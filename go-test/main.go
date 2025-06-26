@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"test/calculator"
 )
 
 func main() {
-	fmt.Println("Hello, World!")
-	var result = calculator.Add(1, 2)
-	fmt.Println(result)
+	var text1 = "I"
+	fmt.Println(len(text1))
+	var text2 = "我"
+	fmt.Println(len(text2))
 }
