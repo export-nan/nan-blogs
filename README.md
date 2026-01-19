@@ -4,7 +4,6 @@ layout: BlogHome
 icon: home
 title: 主页
 heroText: NAN的个人博客
-bgImage: /banner-2023-02-27.webp
 heroFullScreen: true
 tagline: 世界这么广阔，我穷尽一生也只能窥其一角
 
