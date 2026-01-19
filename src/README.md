@@ -7,7 +7,7 @@ title: 主页
 heroText: NAN的个人博客
 bgImage: /banner-2023-02-27.webp
 heroFullScreen: true
-tagline: 逆境能给一个人丰富并锻炼自己的机会
+tagline: 世界这么广阔，我穷尽一生也只能窥其一角
 
 # 这里可以放一些链接
 projects:

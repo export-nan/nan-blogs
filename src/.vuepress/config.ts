@@ -1,5 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import { getDirname, path } from "@vuepress/utils";
+
 const __dirname = getDirname(import.meta.url);
 
 import theme from "./theme.js";
@@ -24,11 +25,4 @@ export default defineUserConfig({
   theme,
 
   shouldPrefetch: false,
-
-  alias: {
-    "@theme-hope/components/HomePage": path.resolve(
-      __dirname,
-      "./theme/HomePage.vue",
-    ),
-  }
 });
