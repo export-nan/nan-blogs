@@ -1,0 +1,469 @@
+<template><div><h2 id="常用指令" tabindex="-1"><a class="header-anchor" href="#常用指令"><span>常用指令</span></a></h2>
+<p>这里只梳理了一些常用的指令，具体指令可以参考官方文档<br>
+<a href="https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/quick-start/arkts-bytecode-fundamentals.md#https://gitee.com/link?target=https%3A%2F%2F262.ecma-international.org%2F12.0%2F%23sec-tonumber" target="_blank" rel="noopener noreferrer">方舟字节码基本原理</a></p>
+<h3 id="寄存器指令" tabindex="-1"><a class="header-anchor" href="#寄存器指令"><span>寄存器指令</span></a></h3>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>用途</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mov vA, vB</td>
+<td>将寄存器B中的内容复制到寄存器A中</td>
+<td>A, B：寄存器索引</td>
+</tr>
+<tr>
+<td>lda vA</td>
+<td>将寄存器A中的内容存放到acc中</td>
+<td>A：寄存器索引</td>
+</tr>
+<tr>
+<td>sta vA</td>
+<td>将acc中的内容存放到寄存器A中</td>
+<td>默认入参：acc, A：寄存器索引</td>
+</tr>
+<tr>
+<td>ldai vA</td>
+<td>将整型字面量A存放到acc中</td>
+<td>A：常量字面量</td>
+</tr>
+<tr>
+<td>fldai vA</td>
+<td>将双精度浮点型字面量A存放到acc中</td>
+<td>默认入参：acc, A：寄存器索引</td>
+</tr>
+<tr>
+<td>ldtrue</td>
+<td>将true加载进acc</td>
+<td>默认入参：acc</td>
+</tr>
+<tr>
+<td>ldfalse</td>
+<td>将false加载进acc</td>
+<td>默认入参：acc</td>
+</tr>
+<tr>
+<td>ldnull</td>
+<td>将null加载进acc</td>
+<td>默认入参：acc</td>
+</tr>
+<tr>
+<td>ldundefined</td>
+<td>将undefined加载进acc</td>
+<td>默认入参：acc</td>
+</tr>
+<tr>
+<td>definefunc RR, @AAAA, +BB</td>
+<td>创建方法A的函数对象，并将其存放到acc中</td>
+<td>R：方舟运行时内部使用的8位保留数字，A：method id，B：方法A的形参数量</td>
+</tr>
+</tbody>
+</table>
+<h3 id="运算操作指令" tabindex="-1"><a class="header-anchor" href="#运算操作指令"><span>运算操作指令</span></a></h3>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>用途</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add2 R, vA</td>
+<td>计算A + acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>sub2 R, vA</td>
+<td>计算A - acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>mul2 R, vA</td>
+<td>计算A * acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>div2 R, vA</td>
+<td>计算A / acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>mod2 R, vA</td>
+<td>计算A % acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>add2 R, vA</td>
+<td>计算A ** acc（A的acc次方，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>inc RR</td>
+<td>计算acc + 1，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字</td>
+</tr>
+<tr>
+<td>dec RR</td>
+<td>计算acc - 1，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字</td>
+</tr>
+<tr>
+<td>dec RR</td>
+<td>计算acc - 1，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字</td>
+</tr>
+</tbody>
+</table>
+<h3 id="比较运算指令" tabindex="-1"><a class="header-anchor" href="#比较运算指令"><span>比较运算指令</span></a></h3>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>用途</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq R, vA</td>
+<td>计算A == acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>noteq R, vA</td>
+<td>计算A != acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>less R, vA</td>
+<td>计算A &lt; acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>lesseq R, vA</td>
+<td>计算A &lt;= acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>greater R, vA</td>
+<td>计算A &gt; acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>greatereq R, vA</td>
+<td>计算A &gt;= acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>and2 R, vA</td>
+<td>计算A &amp; acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>or2 R, vA</td>
+<td>计算A | acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>xor2 R, vA</td>
+<td>计算A ^ acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：操作数，R：方舟运行时内部使用的8位保留数字，A：操作数</td>
+</tr>
+<tr>
+<td>istrue</td>
+<td>计算acc == true，并将计算结果存放到acc中</td>
+<td>默认入参：acc</td>
+</tr>
+<tr>
+<td>isfalse</td>
+<td>计算acc == false，并将计算结果存放到acc中</td>
+<td>默认入参：acc</td>
+</tr>
+<tr>
+<td>isfalse</td>
+<td>计算acc == false，并将计算结果存放到acc中</td>
+<td>默认入参：acc</td>
+</tr>
+<tr>
+<td>isin RR, vAA</td>
+<td>计算A in acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：对象，R：方舟运行时内部使用的8位保留数字，A：对象</td>
+</tr>
+<tr>
+<td>instanceof RR, vAA</td>
+<td>计算A instanceof acc，并将计算结果存放到acc中</td>
+<td>默认入参：acc：对象，R：方舟运行时内部使用的8位保留数字，A：对象</td>
+</tr>
+<tr>
+<td>strictnoteq RR, vAA</td>
+<td>计算acc !== A，并将计算结果存放到acc中</td>
+<td>默认入参：acc：对象，R：方舟运行时内部使用的8位保留数字，A：对象</td>
+</tr>
+<tr>
+<td>stricteq RR, vAA</td>
+<td>计算acc === A，并将计算结果存放到acc中</td>
+<td>默认入参：acc：对象，R：方舟运行时内部使用的8位保留数字，A：对象</td>
+</tr>
+</tbody>
+</table>
+<h3 id="类型转换" tabindex="-1"><a class="header-anchor" href="#类型转换"><span>类型转换</span></a></h3>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>用途</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tonumber R</td>
+<td>以acc作为参数，执行ToNumber，将结果存放到acc中</td>
+<td>默认入参：acc，R：内部使用的8位保留数字</td>
+</tr>
+<tr>
+<td>tonumeric R</td>
+<td>以acc作为参数，执行ToNumeric，将结果存放到acc中</td>
+<td>默认入参：acc，R：内部使用的8位保留数字</td>
+</tr>
+</tbody>
+</table>
+<h3 id="流程控制指令" tabindex="-1"><a class="header-anchor" href="#流程控制指令"><span>流程控制指令</span></a></h3>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>用途</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jmp +A</td>
+<td>无条件跳转到分支A</td>
+<td>A：有符号的分支偏移量</td>
+</tr>
+<tr>
+<td>jeqz +A</td>
+<td>计算acc == 0，如果为真，则跳转到分支A</td>
+<td>默认入参：acc, 值, A：有符号的分支偏移量</td>
+</tr>
+<tr>
+<td>jnez +A</td>
+<td>计算acc != 0，如果为真，则跳转到分支A</td>
+<td>默认入参：acc, 值, A：有符号的分支偏移量</td>
+</tr>
+<tr>
+<td>callarg1 RR, vAA</td>
+<td>以A作为参数，调用acc中存放的函数对象，并将结果存放到acc中</td>
+<td>默认入参：acc：函数对象，R：方舟运行时内部使用的8位保留数字，A：参数</td>
+</tr>
+<tr>
+<td>callargs2 RR, vAA, vBB</td>
+<td>以A，B作为参数，调用acc中存放的函数对象，并将结果存放到acc中</td>
+<td>默认入参：acc：函数对象，R：方舟运行时内部使用的8位保留数字，A, B：参数</td>
+</tr>
+</tbody>
+</table>
+<h3 id="词法环境控制" tabindex="-1"><a class="header-anchor" href="#词法环境控制"><span>词法环境控制</span></a></h3>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>用途</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newlexenvwithname +AA, @BBBB</td>
+<td>使用索引B对应的字面量数组中所存放的词法变量名称，创建一个具有A个槽位的词法环境，将这个词法环境存放到acc中，并进入该词法环境</td>
+<td>A：词法环境中的槽位数量，B：literal id</td>
+</tr>
+<tr>
+<td>stmodulevar +AA</td>
+<td>将acc中的值存放到槽位号为A的模块变量中</td>
+<td>默认入参：acc：值, A：槽位号</td>
+</tr>
+<tr>
+<td>ldlexvar +A, +B</td>
+<td>将A个层次外的词法环境的B号槽位上的值存放到acc中</td>
+<td>A：词法环境层级，B：槽位号</td>
+</tr>
+<tr>
+<td>stlexvar +A, +B</td>
+<td>将acc中的值存放到A个层次外的词法环境的B号槽位上</td>
+<td>A：词法环境层级，B：槽位号</td>
+</tr>
+</tbody>
+</table>
+<h2 id="示例" tabindex="-1"><a class="header-anchor" href="#示例"><span>示例</span></a></h2>
+<h3 id="函数声明" tabindex="-1"><a class="header-anchor" href="#函数声明"><span>函数声明</span></a></h3>
+<div class="hint-container tip">
+<p class="hint-container-title">Tips</p>
+<div class="language-ts line-numbers-mode" data-highlighter="shiki" data-ext="ts" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-ts"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">function</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> funNAN</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">a</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B"> number</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">b</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B"> number</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, ...</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">...</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">num</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B"> number</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">[]){</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">  ......</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-text"><span class="line"><span>L_ESSlotNumberAnnotation:</span></span>
+<span class="line"><span>  u32 slotNumberIdx { 0x3 }</span></span>
+<span class="line"><span>.function any &#x26;library.Index&#x26;1.0.0.funNAN(any a0, any a1, any a2, any a3, any a4, any a5) &#x3C;static> {</span></span>
+<span class="line"><span>  mov v0, a0        ## v0 &#x3C;-- a0 函数本身（FunctionObject）</span></span>
+<span class="line"><span>  mov v1, a1        ## v1 &#x3C;-- a1 new.target（NewTarget）</span></span>
+<span class="line"><span>  mov v2, a2        ## v2 &#x3C;-- a2 this（this）</span></span>
+<span class="line"><span>  mov v3, a3        ## v3 &#x3C;-- a3 参数1     </span></span>
+<span class="line"><span>  mov v4, a4        ## v3 &#x3C;-- a3 参数2</span></span>
+<span class="line"><span>  mov v5, a5        ## v5 &#x3C;-- a5 参数3</span></span>
+<span class="line"><span>  copyrestargs 0x2  ## acc &#x3C;-- rest 将从索引 2 开始往后的参数的数组副本rest存放到acc中。</span></span>
+<span class="line"><span>  sta v5            ## acc --> v5 将acc中的值存放到v5中，也就是将rest存放到v5中。</span></span>
+<span class="line"><span>  ......</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="简单的加法运算" tabindex="-1"><a class="header-anchor" href="#简单的加法运算"><span>简单的加法运算</span></a></h3>
+<div class="hint-container tip">
+<p class="hint-container-title">Tips</p>
+<div class="language-ts line-numbers-mode" data-highlighter="shiki" data-ext="ts" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-ts"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">function</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> addNAN</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">a</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B"> number</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">b</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B"> number</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, )</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B"> number</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  return</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> a</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> +</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> b</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-text"><span class="line"><span>.function any &#x26;library.Index&#x26;1.0.0.addAN(any a0, any a1, any a2, any a3, any a4, any a5) &#x3C;static> {</span></span>
+<span class="line"><span>  ......</span></span>
+<span class="line"><span>  mov v3, a3      ## v3 &#x3C;-- a3  </span></span>
+<span class="line"><span>  mov v4, a4      ## v4 &#x3C;-- a4</span></span>
+<span class="line"><span>  lda v3          ## acc &#x3C;-- v3 </span></span>
+<span class="line"><span>  sta v6          ## acc --> v6        这个时候v6的值是a3的值</span></span>
+<span class="line"><span>  lda v4          ## acc &#x3C;-- v4        </span></span>
+<span class="line"><span>  add2 0x0, v6    ## acc &#x3C;-- acc + v6  0X0: 方舟运行时内部使用的8位保留数字</span></span>
+<span class="line"><span>  return          ## return acc       </span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="简单的条件判断" tabindex="-1"><a class="header-anchor" href="#简单的条件判断"><span>简单的条件判断</span></a></h3>
+<div class="hint-container tip">
+<p class="hint-container-title">Tips</p>
+<div class="language-ts line-numbers-mode" data-highlighter="shiki" data-ext="ts" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-ts"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">function</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> ifNAN</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">isTrue</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B"> boolean</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B"> number</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  if</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">isTrue</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">){</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    return</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1000</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  }</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">else</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    return</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 2000</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  }</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-text"><span class="line"><span>.function any &#x26;library.Index&#x26;1.0.0.ifNAN(any a0, any a1, any a2, any a3) &#x3C;static> {</span></span>
+<span class="line"><span>  ......</span></span>
+<span class="line"><span>  mov v3, a3            ## v3 &#x3C;-- a3</span></span>
+<span class="line"><span>  lda v3                ## acc &#x3C;-- v3</span></span>
+<span class="line"><span>  isfalse               ## acc &#x3C;-- acc == false</span></span>
+<span class="line"><span>  jnez jump_label_0     ## acc != false 跳转到jump_label_0</span></span>
+<span class="line"><span>  ldai 0x3e8            ## acc &#x3C;-- 1000</span></span>
+<span class="line"><span>  return                ## return acc</span></span>
+<span class="line"><span>  jmp jump_label_1      ## 跳转到jump_label_1</span></span>
+<span class="line"><span>jump_label_0:           </span></span>
+<span class="line"><span>  ldai 0x7d0            ## acc &#x3C;-- 2000</span></span>
+<span class="line"><span>  return                ## return acc</span></span>
+<span class="line"><span>jump_label_1:</span></span>
+<span class="line"><span>  ldundefined           ## acc &#x3C;-- undefined</span></span>
+<span class="line"><span>  returnundefined       ## return undefined</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="简单的循环" tabindex="-1"><a class="header-anchor" href="#简单的循环"><span>简单的循环</span></a></h3>
+<div class="hint-container tip">
+<p class="hint-container-title">Tips</p>
+<div class="language-ts line-numbers-mode" data-highlighter="shiki" data-ext="ts" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-ts"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">function</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> loopNAN</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">maxNum</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B"> number</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B"> number</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  let</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> i</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B">number</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 0</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  while</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">i</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">>=</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">maxNum</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">){</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">    i</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">++</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  }</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">  ......</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-text"><span class="line"><span>.function any &#x26;library.Index&#x26;1.0.0.loopNAN(any a0, any a1, any a2, any a3) &#x3C;static> {</span></span>
+<span class="line"><span>  ......</span></span>
+<span class="line"><span>  mov v3, a3              ## v3 &#x3C;-- a3</span></span>
+<span class="line"><span>  ldai 0x0                ## acc &#x3C;-- 0</span></span>
+<span class="line"><span>  sta v4                  ## acc --> v4</span></span>
+<span class="line"><span>jump_label_1:</span></span>
+<span class="line"><span>  lda v4                  ## acc &#x3C;-- v4</span></span>
+<span class="line"><span>  sta v6                  ## acc --> v6</span></span>
+<span class="line"><span>  lda v3                  ## acc &#x3C;-- v3</span></span>
+<span class="line"><span>  lesseq 0x0, v6          ## acc &#x3C;-- acc &#x3C;= v6 0x0: 方舟运行时内部使用的8位保留数字</span></span>
+<span class="line"><span>  jeqz jump_label_0       ## acc == false 跳转到jump_label_0</span></span>
+<span class="line"><span>  lda v4                  ## acc &#x3C;-- v4</span></span>
+<span class="line"><span>  sta v6                  ## acc --> v6</span></span>
+<span class="line"><span>  lda v6                  ## acc &#x3C;-- v6</span></span>
+<span class="line"><span>  tonumeric 0x1           ## acc &#x3C;-- tonumeric(acc)  tonumeric:转数值操作，它返回转换为 Number 或 BigInt 的值。0x1: 方舟运行时内部使用的8位保留数字</span></span>
+<span class="line"><span>  sta v6                  ## acc --> v6</span></span>
+<span class="line"><span>  lda v6                  ## acc &#x3C;-- v6</span></span>
+<span class="line"><span>  inc 0x2                 ## acc &#x3C;-- acc + 1  0x2: 方舟运行时内部使用的8位保留数字</span></span>
+<span class="line"><span>  sta v4                  ## acc --> v4</span></span>
+<span class="line"><span>  lda v6                  ## acc &#x3C;-- v6</span></span>
+<span class="line"><span>  jmp jump_label_1        ## 跳转到jump_label_1</span></span>
+<span class="line"><span>jump_label_0:</span></span>
+<span class="line"><span>  ......                     ## 结束循环</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="方法间的互相调用" tabindex="-1"><a class="header-anchor" href="#方法间的互相调用"><span>方法间的互相调用</span></a></h3>
+<div class="hint-container tip">
+<p class="hint-container-title">Tips</p>
+<div class="language-ts line-numbers-mode" data-highlighter="shiki" data-ext="ts" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-ts"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">function</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> addNAN</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">a</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B">number</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">b</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B">number</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B">number</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  return</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> a</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">+</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">b</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">function</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> getNumNAN</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#0184BC;--shiki-dark:#E5C07B">number</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  return</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> addNAN</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">100</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">200</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-text"><span class="line"><span>L_ESSlotNumberAnnotation:</span></span>
+<span class="line"><span>  u32 slotNumberIdx { 0x2 }</span></span>
+<span class="line"><span>.function any &#x26;library.Index&#x26;1.0.0.addFun(any a0, any a1, any a2, any a3, any a4) &#x3C;static> {</span></span>
+<span class="line"><span>  ......</span></span>
+<span class="line"><span>  ldlexvar 0x1, 0x0        ## acc &#x3C;-- lexvar(1, 0) 从 1 个层次外的的词法环境的 0 号槽位上取出值放到acc中</span></span>
+<span class="line"><span>  sta v6                   ## acc --> v6</span></span>
+<span class="line"><span>  ......                 </span></span>
+<span class="line"><span>  lda v6                   ## acc &#x3C;-- v6</span></span>
+<span class="line"><span>  callargs2 0x0, v7, v8    ## acc &#x3C;-- call(acc, v7, v8) 调用acc上的方法，传人v7, v8两个参数</span></span>
+<span class="line"><span>  return</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>L_ESSlotNumberAnnotation:</span></span>
+<span class="line"><span>  u32 slotNumberIdx { 0x1 }</span></span>
+<span class="line"><span>.function any &#x26;library.Index&#x26;1.0.0.addNAN(any a0, any a1, any a2, any a3, any a4) &#x3C;static> {</span></span>
+<span class="line"><span>  ......</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>L_ESSlotNumberAnnotation:</span></span>
+<span class="line"><span>  u32 slotNumberIdx { 0x2 }</span></span>
+<span class="line"><span>.function any &#x26;library.Index&#x26;1.0.0.func_main_0(any a0, any a1, any a2) &#x3C;static> {</span></span>
+<span class="line"><span>  newlexenvwithname 0x1, { 3 [ i32:1, string:"addNAN", i32:0, ]}           ## 创建一个带有一个槽位的词法环境，并进入这个词法环境</span></span>
+<span class="line"><span>  ...... </span></span>
+<span class="line"><span>  definefunc 0x0, &#x26;library.Index&#x26;1.0.0.numberNAN:(any,any,any), 0x0        ## acc &#x3C;-- new funcObj(numberNAN, 0) 创建一个numberNAN的方法对象，形参数量为0</span></span>
+<span class="line"><span>  stmodulevar 0x0                                                          ## acc --> modulevar 0 将acc中的值存放到槽位号为 0 的模块变量中。</span></span>
+<span class="line"><span>  definefunc 0x1, &#x26;library.Index&#x26;1.0.0.addNAN:(any,any,any,any,any), 0x2   ## acc &#x3C;-- new funcObj(addNAN, 2) 创建一个addNAN的方法对象，形参数量为2</span></span>
+<span class="line"><span>  sta v3                                                                   ## acc --> v3</span></span>
+<span class="line"><span>  lda v3                                                                   ## acc &#x3C;-- v3</span></span>
+<span class="line"><span>  stlexvar 0x0, 0x0                                                        ## acc --> lexvar(0, 0) 将acc中的值存放到 0 个层次外的的词法环境的 0 号槽位上</span></span>
+<span class="line"><span>  ......</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>L_ESSlotNumberAnnotation:</span></span>
+<span class="line"><span>  u32 slotNumberIdx { 0x3 }</span></span>
+<span class="line"><span>.function any &#x26;library.Index&#x26;1.0.0.numberNAN(any a0, any a1, any a2) &#x3C;static> { </span></span>
+<span class="line"><span>  newlexenvwithname 0x2, { 5 [ i32:2, string:"4newTarget", i32:0, string:"this", i32:1, ]}  ## 创建一个带有两个槽位的词法环境，并进入这个词法环境</span></span>
+<span class="line"><span>  mov v0, a0                                                                                </span></span>
+<span class="line"><span>  lda a1                                                                                    ## acc &#x3C;-- a1   new.target（NewTarget）</span></span>
+<span class="line"><span>  stlexvar 0x0, 0x0                                                                         ## acc --> lexvar(0, 0) 将acc中的值存放到 0 个层次外的的词法环境的 0 号槽位上</span></span>
+<span class="line"><span>  lda a2                                                                                    ## acc &#x3C;-- a2   this</span></span>
+<span class="line"><span>  stlexvar 0x0, 0x1                                                                         ## acc --> lexvar(0, 1) 将acc中的值存放到 0 个层次外的的词法环境的 1 号槽位上</span></span>
+<span class="line"><span>  definefunc 0x0, &#x26;library.Index&#x26;1.0.0.addFun:(any,any,any,any,any), 0x2                    ## acc &#x3C;-- new funcObj(addFun, 2) 创建一个addFun的方法对象，形参数量为2</span></span>
+<span class="line"><span>  sta v3                                                                                    ## acc --> v3</span></span>
+<span class="line"><span>  lda v3                                                                                    ## acc &#x3C;-- v3</span></span>
+<span class="line"><span>  sta v5                                                                                    ## acc --> v5 </span></span>
+<span class="line"><span>  ......</span></span>
+<span class="line"><span>  lda v5                                                                                    ## acc &#x3C;-- v5</span></span>
+<span class="line"><span>  callargs2 0x1, v6, v7                                                                     ## acc &#x3C;-- call(acc, v6, v7) 调用acc上的方法，传人v6, v7两个参数</span></span>
+<span class="line"><span>  return                                                                                    ## return acc</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+
+
