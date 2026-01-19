@@ -10,21 +10,20 @@ export default hopeTheme({
     url: "https://github.com/open-nan",
   },
 
-  iconAssets: "iconfont",
-
   repo: "export-nan/nan-blogs",
 
   docsBranch: "docs",
 
-  docsDir: "src",
+  docsDir: "./",
 
   blog: {
     name: 'NAN',
     avatar: '/avatar.JPG',
     description: "一个前端开发者",
     intro: "/intro.html",
-    roundAvatar: true,
   },
+
+  footer: "这里是页脚 _(:з」∠)_",
 
   locales: {
     "/": {
@@ -37,7 +36,7 @@ export default hopeTheme({
 
       // page meta
       metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
+        editLink: "有错误的地方？在Github上给我提一个issue吧",
       },
     },
   },
@@ -80,7 +79,7 @@ export default hopeTheme({
       stylize: [
         {
           matcher: "Recommended",
-          replacer: ({ tag }) => {
+          replacer: ({ tag }: any) => {
             if (tag === "em")
               return {
                 tag: "Badge",
