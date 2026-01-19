@@ -198,7 +198,7 @@ func main() {
 iota可以在Go程序编译时修改常量的值，默认起始值为0
 每创建常量一个，iota迭代次数就加1
 
-```goju
+```go
   const (
     A = iota // iota = 0
     B       //  B = iota = 1
