@@ -3,17 +3,10 @@ home: true
 layout: BlogHome
 icon: home
 title: 主页
-# heroImage: /logo.svg
 heroText: NAN的个人博客
 bgImage: /banner-2023-02-27.webp
 heroFullScreen: true
 tagline: 世界这么广阔，我穷尽一生也只能窥其一角
-
-# 这里可以放一些链接
-projects:
-  - name: chatgpt-api 脚本
-    desc: 基于chatgpt-api接入的Dos脚本
-    link: https://github.com/export-nan/chatgpt-script
 
 footer: 这里是页脚 _(:з」∠)_
 ---
