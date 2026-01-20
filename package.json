@@ -11,6 +11,7 @@
     "update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
+    "@vuepress/utils": "^2.0.0-rc.26",
     "@vuepress/bundler-vite": "2.0.0-rc.26",
     "sass-embedded": "^1.97.1",
     "vue": "^3.5.26",
