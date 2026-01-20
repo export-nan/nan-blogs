@@ -32,7 +32,7 @@ jobs:
         NODE_OPTIONS: --max_old_space_size=8192
       run: |-
         pnpm run build
-        > src/.vuepress/dist/.nojekyll
+        > .vuepress/dist/.nojekyll
 
     - name: 部署到github page
       uses: JamesIves/github-pages-deploy-action@v4
