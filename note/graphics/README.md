@@ -6,6 +6,7 @@ category:
 ---
 
 ## 目录
-[线性代数](./linearAlgebra.md)  
-[观测变换](./viewing.md)
-[视口与光栅化](./rasteriz.md)
+
+[线性代数](./01.linearAlgebra.md)  
+[观测变换](./02.viewing.md)
+[视口与光栅化](./03.rasteriz.md)
