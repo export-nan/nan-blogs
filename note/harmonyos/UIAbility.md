@@ -38,7 +38,7 @@ tag:
 
 该模块可以控制应用UI组件的生命周期，包括应用的启动、切换至后台/前台、销毁等。在应用切换状态时，系统会调用对于的回调方法
 
-![生命周期与回调函数](./../../.vuepress/public/assets/HarmonyOS/harmony-UIAbility-life-cycle.png)
+![生命周期与回调函数](./images/harmony-UIAbility-life-cycle.png)
 
 ```ts
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit'; // 引入HarmonyOS AbilityKit模块， 用来提供Ability相关能力

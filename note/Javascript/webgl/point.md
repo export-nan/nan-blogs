@@ -13,6 +13,7 @@ category:
 ::: vue-playground webgl 绘制一个点
 
 @file App.vue
+
 ```vue
 <template >
   <canvas 
@@ -126,10 +127,10 @@ function initShaber(gl: WebGLRenderingContext, vertexShaderSource: string, framg
 
 :::
 
-
 ::: vue-playground webgl 绘制一个矩形
 
 @file App.vue
+
 ```vue
 <template >
   <canvas 
