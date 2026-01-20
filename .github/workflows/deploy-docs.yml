@@ -38,7 +38,7 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: src/.vuepress/dist
+        folder: .vuepress/dist
 
     # - name: 部署到阿里云服务器
     #   uses: appleboy/ssh-action@v1.0.0
