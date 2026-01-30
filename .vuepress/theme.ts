@@ -54,9 +54,6 @@ export default hopeTheme({
   markdown: {
     align: true,
     attrs: true,
-    chart: true,
-    codetabs: true,
-    container: true,
     demo: true,
     echarts: true,
     figure: true,
@@ -65,11 +62,13 @@ export default hopeTheme({
     imgLazyload: true,
     imgSize: true,
     include: true,
-    katex: true,
     mark: true,
     mermaid: true,
     playground: {
       presets: ["ts", "vue"],
+    },
+    math: {
+      type: "katex", // 或 'mathjax'
     },
     // presentation: {
     //   plugins: ["highlight", "math", "search", "notes", "zoom"],

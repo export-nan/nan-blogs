@@ -16,12 +16,13 @@ onMounted(() => {
   }else{
     const mousePosition = {x: -2, y: 2}
     window.onmousemove = (e)=>{
-    const rect = (gl.canvas as HTMLCanvasElement).getBoundingClientRect();
+      const rect = (gl.canvas as HTMLCanvasElement).getBoundingClientRect();
       const x = (e.clientX - rect.left - rect.width / 2) / rect.width * 2;
       const y = -(e.clientY - rect.top  - rect.height / 2) / rect.height * 2;
       mousePosition.x = x;
       mousePosition.y = y;
     }
+
     webgl(gl, mousePosition);
   }
 });
