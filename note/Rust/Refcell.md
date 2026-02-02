@@ -120,4 +120,3 @@ impl const Drop for BorrowRefMut<'_> {
 ## Deref
 
 Deref 可以让智能指针像引用那样工作，这样你就可以写出同时支持智能指针和引用的代码，例如 *T
-

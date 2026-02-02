@@ -1,4 +1,9 @@
-## 问题
+---
+title: 关于 vscode Javascript debug Treminla 运行调试无法进入调试状态的问题
+date: 2026-01-05
+category: 
+  - 日常记录
+---
 
 今天在用 vscode 的 Javascript debug Treminla 调试新项目的时候没办法进入调试状态，我卸载了重装依旧没有办法排除问题
 表现为:

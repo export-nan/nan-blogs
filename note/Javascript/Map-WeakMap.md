@@ -6,14 +6,15 @@ tag:
 category:
   - Javascript/Typescript
 ---
-# Map 与 WeakMap
 
 ## Map 映射表
+
 ::: info 在MDN上是这么描述 Map 的:
   该Map对象保存键值对并记住键的原始插入顺序。任何值（对象和 原始值）都可以用作键或值。
 :::
 
 说到键值对形式的数据格式，我会很容易联想到`数组(Array)`和`对象(Object)`,我们先来看一下它的区别
+
 ```js
 /**
  * Array
@@ -43,6 +44,7 @@ object.forEach((value,key)=>{
 ```
 
 Map 你可以把它看成一个可以跌代的对象，而它的key可以为对象或者原始值
+
 ```js
 /**
  * Map
@@ -67,7 +69,9 @@ map.forEach((value,key)=>{
   console.log(key+' => '+value + ', ');
 }) // name => 'aaaa', [object Object] => 这里对key是一个对象,
 ```
+
 ### Map 的方法及属性
+
 ```js
 // 静态属性
 get Map[@@species]
@@ -113,8 +117,8 @@ Map.prototype.forEach()
 // 如果给定了 thisArg 参数，这个参数将会是回调函数中 this 的值。
 ```
 
-
 ## WeakMap（弱映射表)
+
 ::: info 在MDN上是这么描述 WeakMap 的:
   WeakMap 对象是一组键/值对的集合，其中的键是弱引用的。其键必须是对象，而值可以是任意的。
 :::
@@ -129,7 +133,9 @@ const Obj = {name: 'I'}
 weakMap.set(Obj: '这里的key是一个对象')
 console.log(weakMap.get(Obj)) // 这里的key是一个对象
 ```
+
 ### WeakMap 的实例方法
+
 ```js
 WeakMap.prototype.delete(key)
 // 删除 WeakMap 中与 key 相关联的值。删除之后， WeakMap.prototype.has(key) 将会返回 false。
@@ -145,9 +151,11 @@ WeakMap.prototype.set(key, value)
 ```
 
 ## 为什么我们需要WeakMap
+
 ::: warning Map 的缺陷
 Map 在建立以对象为key的映射关系时会建立与对象的强引用，这会可能会导致内存泄露
 :::
+
 ```js
 const map = new Map()
 for(let i=0,i<=100000,i++){
@@ -160,7 +168,9 @@ for(let i=0,i<=100000,i++){
   })()
 }
 ```
+
 而 WeakMap 只会与key建立弱连接，这样防止了内存泄露
+
 ```js
 const weakMap = new WeakMap()
 for(let i=0,i<=100000,i++){
@@ -170,5 +180,6 @@ for(let i=0,i<=100000,i++){
   })()
 }
 ```
+
 ::: tip 这也是为什么 WeakMap 有`.values()`的实例方法而没有`.keys()`的实例方法的原因
 :::
