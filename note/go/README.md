@@ -8,8 +8,6 @@ category:
 ::: warning 建设中.....
 :::
 
-# Golang 学习笔记
-
 [标准库](https://pdos.csail.mit.edu/6.824/index.html)
 [标准库中文](https://studygolang.com/pkgdoc)
 

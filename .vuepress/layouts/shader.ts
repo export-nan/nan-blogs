@@ -118,15 +118,27 @@ export default function main(gl: WebGLRenderingContext, mousePosition: { x: numb
   const resolutionLocation = gl.getUniformLocation(program, "iResolution");
   const timeLocation = gl.getUniformLocation(program, "iTime");
   const mouseLocation = gl.getUniformLocation(program, "iMouse");
+  const fv = gl.getUniformLocation(program, "fv");
   const positionLocation = gl.getAttribLocation(program, "aPosition");
   gl.useProgram(program);
   const startTime = Date.now();
+  let f_v = 0.05;
+  const a = mousePosition.x;
+  const b = mousePosition.y;
   (function render(){
+    if(mousePosition.x !== a || mousePosition.y !== b){
+      f_v = 0.05
+    }
+    if (f_v > 0.01){
+      f_v -= 0.01;
+    }
+    console.log(f_v)
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
     const time = Date.now() - startTime;
     gl.uniform2f(resolutionLocation, gl.canvas.width, gl.canvas.height);
     gl.uniform2f(mouseLocation, mousePosition.x, mousePosition.y);
     gl.uniform1f(timeLocation, time/1000);
+    gl.uniform1f(fv, f_v);
     const buffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);

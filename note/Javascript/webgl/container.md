@@ -41,3 +41,7 @@ const ctx = document.querySelector<HTMLCanvasElement>("#canvas")?.getContext("we
 顶点着色器和片元着色器是可编程的功能单元，拥有更大的自主性，还有光栅器、深度测试等不可编程的功能单元。CPU会通过WebGL APl和GPU通信，传递着色器程序和数据，GPU执行的着色器程序可以通过useProgram方法切换，传递数据就是把CPU主存中的数据传送到GPU的显存中。
 
 ![渲染管线](./images/rendering_pipeline.jpg)
+
+## 着色器程序
+
+着色器程序由顶点着色器和片元着色器组成，顶点着色器负责通过顶数据规划出要渲染的平面，片元着色器负责在规划出的屏幕内进行像素插值计算出每个像素的RGB值。

@@ -4,9 +4,9 @@ order: 1
 category:
   - GO
 ---
-# 安装与环境配置
 
 ## SDK 下载
+
 ::: tip SDK
  全称为Software Development Kit软件开发工具，提供给开发用的，其中包含了开发对应语言的工具包
 :::
@@ -19,12 +19,16 @@ Golang 中文社区下载地址为：[https://studygolang.com/dl](https://studyg
 :::
 
 ## 环境搭建
+
 安装完成之后运行
+
 ```shell
 $ go version
 # 如果出现`go version go1.8.1 darwin/amd64` 则证明安装完成
 ```
+
 检查家目录下是否有`.bash_profile`如果没有，就新建一个，然后写入
+
 ```shell
 
 # GOBIN指向SDK的根目录
@@ -33,14 +37,19 @@ export GOROOT=/usr/local/go
 export GOPATH=/Users/nan/code/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 ```
+
 更新环境变量
+
 ```shell
 source ~/.bash_profile
 ```
+
 这时在执行`go version`应该就能看见版本信息了
 
 ## 重要的环境变量
+
 Go通过环境变量来做项目上的管理和控制，通过命令go env可以查看相关变量：
+
 ```shell
 $ go env
 # 启用go module管理项目，需要有go.mod和go.sum文件；
@@ -87,11 +96,13 @@ PKG_CONFIG="pkg-config"
 ```
 
 ## DOS 命令
+
 - go 指令用于构建编译我们的代码
 - gofw
 - ldd 可查看可执行文件的依赖库
 
 ## 常用的代理有
+
 ```shell
 # 1. 七牛 CDN
 export GOPROXY=https://goproxy.cn,direct

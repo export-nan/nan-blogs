@@ -8,17 +8,19 @@ category:
   - Javascript/Typescript
 ---
 
-## 什么是响应式?
+:::tip 什么是响应式?
 首先响应式是一个过程，由两个参与者组成，一个是`触发者`，另个是`响应者`
 
 - 触发者：数据
 - 响应者：引用数据的函数 (vue3中称之为`副作用函数(effect)`)
 
 当数据改变时，引用数据的`副作用函数`响应数据的改变并重新执行，这个过程就是响应式
-
+:::
 
 ## 响应式核心：Proxy 代理
+
 `new Proxy` 传入一个源对象，返回一个`Proxy`实例
+
 ```ts
 //创建一个源对象
 const srcObj = { name: 'srcObj'}
@@ -40,9 +42,11 @@ const prxoy = new Proxy(srcObj,{
 ```
 
 ## 基本的响应式实现思路
+
 思路：先创建了一个代理对象，在对代理对象的值进行更改的时候重新执行副作用函数
 
 创建 reactive 工厂函数
+
 ```ts
 /**
  * 响应式数据工厂
@@ -64,13 +68,17 @@ function reactive<T extends object>(data: T):T{
 // 定义一个响应式数据
 const a = reactive({text: 'aaaa'})
 ```
+
 定义一个`副作用函数`, 当函数被调用时更改 HTML 中的数据
+
 ```ts
 function effect(){
   document.querySelector("#app").innerHTML =  a.text
 }
 ```
+
 在代理对象的属性被更改时调用`副作用函数`
+
 ```ts
 function reactive<T extends object>(data: T):T{
   return new Proxy(data,{
@@ -87,6 +95,7 @@ function reactive<T extends object>(data: T):T{
   })
 }
 ```
+
 这样我们便实现了一个简单`reactive`函数
 
 ## 定义一个副作用桶
@@ -118,7 +127,9 @@ function reactive<T extends object>(data: T):T{
   })
 }
 ```
+
 当有新的`副作用函数`需要依赖于`reactive`时我们向`副作用函数集合`中添加这个`副作用函数`即可
+
 ```ts
 // 定义一个副作用函数
 function effectA(){
@@ -131,12 +142,15 @@ function effectB(){
 }
 effectSet.add(effectB)
 ```
+
 在这里我们通常称这种`副作用函数集合`为`副作用桶(bucket)`
 
 ## 依赖收集
+
 前面我们通过`副作用函数`放入到`副作用桶`中实现了对`副作用函数`的拓展，但这里我们没有区分不同属性对应的`副作用函数`，这会导致不必要的性能损失
 
 比如:
+
 ``` ts
 // 我们定义一个响应式数据，有name和age两个属性
 const person = reactive({name: 'a', age: 0})
@@ -170,10 +184,13 @@ person.name = 'b'
 3. 在`get函数`中我们将全局变量中保存的`副作用函数`收集到`副作用函桶`中
 
 步骤1: 定义一个全集到变量，存放当前正在执行的`副作用函数`
+
 ```ts
 let activeEffect:Effect|null = null
 ```
+
 步骤2: 定义一个`副作用函数`，将`副作用函数`保存到`activeEffect`上
+
 ```js
 // 定义一个副作用函数
 function effectName(){
@@ -206,7 +223,9 @@ function reactive<T extends object>(data: T):T{
   })
 }
 ```
+
 这样当我们执行`步骤2`时，代理对象会自动的将我们的`副作用函数`收集到`副作用桶`中，为了方便后面调用，我们将 `步骤2` 封装成为一个方法
+
 ```ts
 /**
  * 注册副作用函数
@@ -229,10 +248,12 @@ function effectName(){
 // 注册 effectName
 registEffect(effectName)
 ```
+
 ::: info 在 vue源码中将 registEffect 写为 effect
 :::
 
 现在我们实现了对`副作用函数`的注册，但我们的问题还没有解决，`副作用函数`与它所依赖的属性还是没有一一对应，但是我们距离实现已经很接近了，我们只需要对我们的桶进行`Map映射`
+
 ```mermaid
 flowchart TB
   subgraph Map
@@ -242,12 +263,15 @@ flowchart TB
 ```
 
 首先我们修改一下桶的结构
+
 ```ts
 // const effectSet = new Set<Effect>()
 type EffectSet = Set<Effect>
 const effectMap = new Map<string|symbol,EffectSet>()
 ```
+
 在`reactive`工厂函数中我们修改`get`和`set`函数
+
 ```ts
 function reactive<T extends object>(data: T):T{
   return new Proxy(data,{
@@ -282,14 +306,15 @@ function reactive<T extends object>(data: T):T{
   })
 }
 ```
+
 ::: info vue源码中对 get/set 函数中关于依赖收集的部分进行了封装，分别为 track/trigger 方法
 :::
 
 ## 进一步改进桶结构
+
 到这里我们基本完成了响应式的基本逻辑，但如果我们将视角拉回全局你会发现，如果我们定义两个响应式对象，且两个响应式对象都有一个属性名相同的属性，我们一样会遇见我们在`依赖收集`中遇到的问题
 
 如果你认真的看完了`依赖收集`你一定会想到，在这里我们只需要将桶进一步改造一下，将不同的响应式对象分割成不同的`副作用桶`
-
 
 ```mermaid
 flowchart TB
@@ -309,6 +334,7 @@ flowchart TB
 ```
 
 ## 使用 WeckMap 对桶结构进行改进
+
 ::: tip WeckMap 弱映射表
   可以看成是Map的弱版本，它的key只能是一个对象，具体区别可以去看[这篇文章](/note/es6/Map-WeakMap.html)
 :::
@@ -319,7 +345,9 @@ type EffectSet = Set<Effect>
 type EffectMap = Map<string|symbol,EffectSet>
 const bucket = new WeakMap<object,EffectMap>()
 ```
+
 改写 reactive
+
 ```ts
 function reactive<T extends object>(data: T):T{
   return new Proxy(data,{
@@ -368,10 +396,12 @@ function reactive<T extends object>(data: T):T{
 ```
 
 ## 总结
+
 现在我们通过`reactive`函数创建响应式对象，并使用`registEffect`函数对副作用函数进行依赖搜集，当响应式数据发生改变时会触发`set`函数找到对应的副作用函数并执行
 这实际上是一个发布订阅模式，响应式数据作为发布者，副作用函数作为订阅者
 
 完整代码：
+
 ```ts
 type Effect =()=>void
 

@@ -1,4 +1,12 @@
-# WebAssembly
+---
+title: WebAssembly
+date: 2024-02-14
+tag:
+  - es6
+  - wasm
+category:
+  - Javascript/Typescript
+---
 
 ## WebAssembly 工作原理
 

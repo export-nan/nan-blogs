@@ -14,7 +14,7 @@ onMounted(() => {
   if (gl === null) {
     alert("Unable to initialize WebGL. Your browser or machine may not support it.");
   }else{
-    const mousePosition = {x: -2, y: 2}
+    const mousePosition = {x: 0, y: 0}
     window.onmousemove = (e)=>{
       const rect = (gl.canvas as HTMLCanvasElement).getBoundingClientRect();
       const x = (e.clientX - rect.left - rect.width / 2) / rect.width * 2;
@@ -22,7 +22,6 @@ onMounted(() => {
       mousePosition.x = x;
       mousePosition.y = y;
     }
-
     webgl(gl, mousePosition);
   }
 });

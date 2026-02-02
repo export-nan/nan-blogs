@@ -446,7 +446,6 @@ export default class EntryAbility extends UIAbility {
 
 当FunUIAbility实例已经启动并在前台运行过，由于某些原因切换到后台，再次启动该UIAbility实例时，可以快速恢复UIAbility实例的状态。这时再次启动不会重新走初始化逻辑，只会直接触发onNewWant()生命周期方法。为了实现跳转到指定页面，需要在onNewWant()中解析参数进行处理。
 
-
 ```ts
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { Want, UIAbility } from '@kit.AbilityKit';
