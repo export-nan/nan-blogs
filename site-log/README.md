@@ -55,6 +55,7 @@ star: true
 
 ## 站点规划
 
+- [x] 基于openclaw的agent自动化管理
 - [ ] 实现类似 `shadertoy` 的 shader demo 展示
 - [x] 基于`docker`自动发布到`阿里云`
 - [x] 基于`Github actions`自动发布到`Github page`
