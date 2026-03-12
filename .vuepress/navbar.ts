@@ -13,6 +13,11 @@ export const Navbar = navbar([
         link: "/site-log/"
     },
     {
+        text: "agent",
+        icon: "robot",
+        link: "/agent/"
+    },
+    {
         text: "其他",
         icon: "any",
         link: "/other/"

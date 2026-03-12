@@ -4,6 +4,7 @@ precision highp float;
 uniform vec2 iResolution;
 uniform vec2 iMouse;
 uniform float iTime;
+uniform float fv;
 
 in vec2 vTexCoord;
 out vec4 fragColor;
@@ -35,8 +36,8 @@ void mainImage(out vec4 O, vec2 F) {
   offset += toBH1 * (0.1 / (dist1*dist1 + 0.01));
   // 第二个黑洞的引力
   vec2 toBH2 = p - bh2;
-  float dist2 = max(length(toBH2), 0.001);
-  offset += toBH2 * (0.05 / (dist2*dist2 + 0.01));
+  float dist2 = max(length(toBH2), 0.05);
+  offset += toBH2 * (fv / (dist2*dist2 + 0.01));
   
   // 应用两个黑洞的共同偏移
   vec2 p_perturbed = p + offset;
