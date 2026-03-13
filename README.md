@@ -12,6 +12,6 @@ footer: 这里是页脚 _(:з」∠)_
 
 <!-- [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats) -->
 
-## 🔐 安全提醒
+<!-- ## 🔐 安全提醒
 
-**重要**：此仓库为公开仓库，请不要提交任何敏感信息（密码、密钥、个人身份信息等）。详情请参阅 [SECURITY.md](./SECURITY.md)。
+**重要**：此仓库为公开仓库，请不要提交任何敏感信息（密码、密钥、个人身份信息等）。详情请参阅 [SECURITY.md](./SECURITY.md)。 -->
