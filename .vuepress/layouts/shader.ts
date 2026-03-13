@@ -121,7 +121,17 @@ export default function main(gl: WebGLRenderingContext, mousePosition: { x: numb
   const positionLocation = gl.getAttribLocation(program, "aPosition");
   gl.useProgram(program);
   const startTime = Date.now();
+  let f_v = 0.05;
+  const a = mousePosition.x;
+  const b = mousePosition.y;
   (function render(){
+    if(mousePosition.x !== a || mousePosition.y !== b){
+      f_v = 0.05
+    }
+    if (f_v > 0.01){
+      f_v -= 0.01;
+    }
+    console.log(f_v)
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
     const time = Date.now() - startTime;
     gl.uniform2f(resolutionLocation, gl.canvas.width, gl.canvas.height);
