@@ -23,7 +23,6 @@ void main() {
     fragColor = color; // 示例：红色
 }`;
 
-
 class Result<T> {
   value: T | null;
   error: string | null;
@@ -99,7 +98,7 @@ class ShaderUtil {
     }
   }
 };
-export default function main(gl: WebGLRenderingContext, mousePosition: { x: number, y: number }) {
+export default function main(gl: WebGLRenderingContext, mousePosition: { x: number, y: number, fv: number }) {
   gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
 
   const vertexShader = ShaderUtil.createShader(gl, gl.VERTEX_SHADER, VERTEX_SHADER);
@@ -122,23 +121,13 @@ export default function main(gl: WebGLRenderingContext, mousePosition: { x: numb
   const positionLocation = gl.getAttribLocation(program, "aPosition");
   gl.useProgram(program);
   const startTime = Date.now();
-  let f_v = 0.05;
-  const a = mousePosition.x;
-  const b = mousePosition.y;
   (function render(){
-    if(mousePosition.x !== a || mousePosition.y !== b){
-      f_v = 0.05
-    }
-    if (f_v > 0.01){
-      f_v -= 0.01;
-    }
-    console.log(f_v)
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
     const time = Date.now() - startTime;
     gl.uniform2f(resolutionLocation, gl.canvas.width, gl.canvas.height);
     gl.uniform2f(mouseLocation, mousePosition.x, mousePosition.y);
     gl.uniform1f(timeLocation, time/1000);
-    gl.uniform1f(fv, f_v);
+    gl.uniform1f(fv, mousePosition.fv);
     const buffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
