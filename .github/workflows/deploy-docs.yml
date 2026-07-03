@@ -39,6 +39,7 @@ jobs:
       with:
         branch: gh-pages
         folder: .vuepress/dist
+        clean: true
 
     # - name: 部署到阿里云服务器
     #   uses: appleboy/ssh-action@v1.0.0
