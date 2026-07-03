@@ -1,6 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import { getDirname } from "vuepress/utils";
-import ensureDirPlugin from '../light/index';
+// import ensureDirPlugin from '../light/index';
 import { viteBundler } from '@vuepress/bundler-vite'
 
 
@@ -10,7 +10,7 @@ import theme from "./theme.js";
 
 export default defineUserConfig({
   base: "/",
-  plugins: [ensureDirPlugin],
+  // plugins: [ensureDirPlugin],
   bundler: viteBundler({
     viteOptions: {},
     vuePluginOptions: {},
