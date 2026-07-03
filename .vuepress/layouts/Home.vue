@@ -10,7 +10,7 @@ const height = 1080;
 onMounted(() => {
   const canvas = webglCanvas.value;
   if (!canvas) return;
-  const gl = canvas.getContext('webgl2');
+  const gl = canvas.getContext('webgl2') as WebGL2RenderingContext;
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   if (gl === null) {
     alert("Unable to initialize WebGL. Your browser or machine may not support it.");
@@ -31,7 +31,7 @@ onMounted(() => {
     //   mousePosition.y = y;
     // }
 
-    const z = 0.01;
+    let z = 0.01;
     window.ontouchstart = (e)=>{
       (function AnimationFrame() {
         mousePosition.fv += z;
@@ -42,7 +42,6 @@ onMounted(() => {
           AnimationFrame = false
           return
         }
-        console.log(mousePosition);
         window.requestAnimationFrame(() => {
           AnimationFrame();
         })

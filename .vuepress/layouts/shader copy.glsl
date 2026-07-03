@@ -9,9 +9,7 @@ uniform float fv;
 in vec2 vTexCoord;
 out vec4 fragColor;
 
-const float MOUSE_DISK_DISTURB_RADIUS = .55;
-const float MOUSE_DISK_SWIRL_STRENGTH = .34;
-const float MOUSE_DISK_RIPPLE_STRENGTH = .075;
+const bool DEBUG_NOISE_POSITION = false;
 
 float hash21(vec2 p)
 {
@@ -76,16 +74,6 @@ void mainImage(out vec4 O, vec2 F)
          v = c * mat2(cos(.5*log(a=dot(c,c)) + iTime*i + vec4(0,33,11,0)))/i,
          //Waves cumulative total for coloring
          w = vec2(0);
-    vec2 mouseP = vec2(iMouse.x * r.x / r.y, iMouse.y) / .7;
-    vec2 mouseDelta = p - mouseP;
-    float mouseDistance = length(mouseDelta);
-    float mouseActive = smoothstep(.015, .06, length(iMouse));
-    float mouseFalloff = exp(-(mouseDistance * mouseDistance) / (MOUSE_DISK_DISTURB_RADIUS * MOUSE_DISK_DISTURB_RADIUS));
-    vec2 mouseDir = normalize(mouseDelta + vec2(.001));
-    vec2 mouseTangent = vec2(-mouseDir.y, mouseDir.x);
-    float mouseRipple = sin(mouseDistance * 24.0 - iTime * 6.0) * MOUSE_DISK_RIPPLE_STRENGTH;
-
-    v += (mouseTangent * MOUSE_DISK_SWIRL_STRENGTH + mouseDir * mouseRipple) * mouseFalloff * mouseActive;
     vec2 blackholeCoord = v;
 
     //Loop through waves
@@ -110,6 +98,22 @@ void mainImage(out vec4 O, vec2 F)
     vec2 shearStep = flowDir * (1.2 + corePull * 3.0);
     float flowNoise = valueNoise(noiseCoord + flowDir * iTime * (2.0 + corePull * 7.0));
     float shear = abs(valueNoise(noiseCoord + shearStep) - valueNoise(noiseCoord - shearStep));
+
+    if (DEBUG_NOISE_POSITION) {
+        vec2 gridUv = fract(noiseCoord);
+        float edgeDistance = min(min(gridUv.x, 1.0 - gridUv.x), min(gridUv.y, 1.0 - gridUv.y));
+        float noiseGrid = 1.0 - smoothstep(.0, .055, edgeDistance);
+        float noiseSpot = smoothstep(.45, .86, rawDust);
+        vec3 noiseView = mix(vec3(.015, .02, .04), vec3(.07, .16, .28), rawDust * globalNoise);
+
+        noiseView += vec3(.08, .38, 1.0) * noiseGrid * (.55 + corePull * .65);
+        noiseView += vec3(1.0, .58, .14) * noiseSpot * (.7 + corePull * 1.2);
+
+        O = vec4(noiseView, 1.0);
+        return;
+    }
+
+    //Red/blue gradient
     O = 1. - exp( -exp( c.x * sin(iTime/4.0) * vec4(.6,-.4,-1,0) )
                    //Wave coloring
                    /  w.xyyx
