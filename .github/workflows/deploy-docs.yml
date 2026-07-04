@@ -46,6 +46,7 @@ jobs:
     - name: 部署到github page
       uses: JamesIves/github-pages-deploy-action@v4
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages
         folder: .vuepress/dist
         clean: true
