@@ -2,6 +2,7 @@
 # 详情请参阅 SECURITY.md
 
 node_modules/
+.vuepress/public/Lumen/
 .vuepress/.cache/
 .vuepress/.temp/
 .vuepress/dist/

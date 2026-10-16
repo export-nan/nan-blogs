@@ -2,6 +2,7 @@ import { navbar } from "vuepress-theme-hope";
 
 export const Navbar = navbar([
     "/",
+    { text: "摄影", icon: "camera", link: "/photography/" },
     {
         text: "学习笔记",
         icon: "edit",
@@ -12,14 +13,4 @@ export const Navbar = navbar([
         icon: "any",
         link: "/site-log/"
     },
-    {
-        text: "agent",
-        icon: "robot",
-        link: "/agent/"
-    },
-    {
-        text: "其他",
-        icon: "any",
-        link: "/other/"
-    }
 ]);
