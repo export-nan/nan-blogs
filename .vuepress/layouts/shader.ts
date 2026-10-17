@@ -1,5 +1,12 @@
 import fragment_shader_2d from './shader.glsl?raw';
 
+export interface MousePosition {
+  x: number;
+  y: number;
+  active: boolean;
+  fv?: number;
+}
+
 const VERTEX_SHADER = `#version 300 es
 in vec2 aPosition;
 out vec2 vTexCoord;
@@ -23,127 +30,96 @@ void main() {
     fragColor = color; // 示例：红色
 }`;
 
-class Result<T> {
-  value: T | null;
-  error: string | null;
+export default function main(gl: WebGL2RenderingContext, mousePosition: MousePosition): () => void {
+  const shaders: WebGLShader[] = [];
+  let program: WebGLProgram | null = null;
+  let buffer: WebGLBuffer | null = null;
+  let vertexArray: WebGLVertexArrayObject | null = null;
+  let frame: number | null = null;
+  let disposed = false;
 
-  constructor(value: T | null, error: string | null) {
-    this.value = value;
-    this.error = error;
-  }
+  const dispose = () => {
+    if (disposed) return;
+    disposed = true;
+    if (frame !== null) cancelAnimationFrame(frame);
+    gl.bindVertexArray(null);
+    gl.bindBuffer(gl.ARRAY_BUFFER, null);
+    gl.useProgram(null);
+    if (vertexArray) gl.deleteVertexArray(vertexArray);
+    if (buffer) gl.deleteBuffer(buffer);
+    if (program) gl.deleteProgram(program);
+    for (const shader of shaders) gl.deleteShader(shader);
+    shaders.length = 0;
+  };
 
-  isSuccess(): boolean {
-    return this.error === null;
-  }
-
-  static success<U>(value: U): Result<U> {
-    return new Result<U>(value, null);
-  }
-
-  static failure<U>(error: string): Result<U> {
-    return new Result<U>(null, error);
-  }
-
-  public asType<T>(): Result<T> {
-    return Result.failure<T>(this.error || "Unknown error");
-  }
-}
-
-class ShaderUtil {
-  /** 初始化Buffer缓冲区
-   *  @param target 目标缓冲区类型
-   *  @param data 数据源
-   *  @param usage 使用方式
-   */
-  public initBuffers(gl: WebGLRenderingContext, target: number, data: number[], usage: GLenum) {
-    const buffer = gl.createBuffer();
-    gl.bindBuffer(target, buffer);
-    gl.bufferData(target, new Float32Array(data), usage);
-    return buffer;
-  }
-  /** 创建着色器
-   * @param type 着色器类型
-   * @param source 着色器代码
-   */
-  static createShader(gl: WebGLRenderingContext, type: number, source: string): Result<WebGLShader> {
-    const shader = gl.createShader(type); // 创建着色器对象
-    if (!shader) return Result.failure("创建着色器失败");
-    gl.shaderSource(shader, source); // 提供数据源
-    gl.compileShader(shader); // 编译 -> 生成着色器
-    if (gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-      return Result.success(shader);
-    }else {
-      const err = gl.getShaderInfoLog(shader);
-      gl.deleteShader(shader);
-      return Result.failure(err || "创建着色器失败");
+  const compile = (type: number, source: string) => {
+    const shader = gl.createShader(type);
+    if (!shader) throw new Error('Unable to allocate a WebGL shader.');
+    shaders.push(shader);
+    gl.shaderSource(shader, source);
+    gl.compileShader(shader);
+    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+      throw new Error(gl.getShaderInfoLog(shader) || 'Unable to compile a WebGL shader.');
     }
-  }
-  /** 创建着色器程序
-   * @param gl 
-   * @param vertexShader 
-   * @param fragmentShader 
-   * @returns
-   */
-  static createProgram(gl: WebGLRenderingContext, vertexShader: WebGLShader, fragmentShader: WebGLShader): Result<WebGLProgram> {
-    const program = gl.createProgram() as WebGLProgram; // 创建程序对象
-    gl.attachShader(program, vertexShader);
-    gl.attachShader(program, fragmentShader);
+    return shader;
+  };
+
+  try {
+    const vertex = compile(gl.VERTEX_SHADER, VERTEX_SHADER);
+    const fragment = compile(gl.FRAGMENT_SHADER, FRAGMENT_SHADER);
+    program = gl.createProgram();
+    if (!program) throw new Error('Unable to allocate a WebGL program.');
+    gl.attachShader(program, vertex);
+    gl.attachShader(program, fragment);
     gl.linkProgram(program);
-    if (gl.getProgramParameter(program, gl.LINK_STATUS)) {
-      return Result.success(program);
-    }else {
-      const err = gl.getProgramInfoLog(program);
-      gl.deleteProgram(program);
-      return Result.failure(err || "创建着色器程序失败");
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+      throw new Error(gl.getProgramInfoLog(program) || 'Unable to link the WebGL program.');
     }
-  }
-};
-export default function main(gl: WebGLRenderingContext, mousePosition: { x: number, y: number, fv: number }) {
-  gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+    for (const shader of shaders) {
+      gl.detachShader(program, shader);
+      gl.deleteShader(shader);
+    }
+    shaders.length = 0;
 
-  const vertexShader = ShaderUtil.createShader(gl, gl.VERTEX_SHADER, VERTEX_SHADER);
-  if (!vertexShader.isSuccess()) {
-    return console.error(vertexShader.error)
-  };
-  const fragmentShader = ShaderUtil.createShader(gl, gl.FRAGMENT_SHADER, FRAGMENT_SHADER);
-  if (!fragmentShader.isSuccess()) {
-    return console.error(fragmentShader.error)
-  };
-  const programResult = ShaderUtil.createProgram(gl, vertexShader.value!, fragmentShader.value!);
-  if (!programResult.isSuccess()) {
-    return console.error(programResult.error)
-  };
-  const program = programResult.value!;
-  const resolutionLocation = gl.getUniformLocation(program, "iResolution");
-  const timeLocation = gl.getUniformLocation(program, "iTime");
-  const mouseLocation = gl.getUniformLocation(program, "iMouse");
-  const fv = gl.getUniformLocation(program, "fv");
-  const positionLocation = gl.getAttribLocation(program, "aPosition");
-  gl.useProgram(program);
-  const startTime = Date.now();
-  let f_v = 0.05;
-  const a = mousePosition.x;
-  const b = mousePosition.y;
-  (function render(){
-    if(mousePosition.x !== a || mousePosition.y !== b){
-      f_v = 0.05
-    }
-    if (f_v > 0.01){
-      f_v -= 0.01;
-    }
-    gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
-    const time = Date.now() - startTime;
-    gl.uniform2f(resolutionLocation, gl.canvas.width, gl.canvas.height);
-    gl.uniform2f(mouseLocation, mousePosition.x, mousePosition.y);
-    gl.uniform1f(timeLocation, time/1000);
-    gl.uniform1f(fv, mousePosition.fv);
-    const buffer = gl.createBuffer();
+    const resolution = gl.getUniformLocation(program, 'iResolution');
+    const time = gl.getUniformLocation(program, 'iTime');
+    const mouse = gl.getUniformLocation(program, 'iMouse');
+    const mouseActive = gl.getUniformLocation(program, 'iMouseActive');
+    const fv = gl.getUniformLocation(program, 'fv');
+    const position = gl.getAttribLocation(program, 'aPosition');
+    if (position < 0) throw new Error('The WebGL program is missing aPosition.');
+
+    buffer = gl.createBuffer();
+    if (!buffer) throw new Error('Unable to allocate the WebGL vertex buffer.');
+    vertexArray = gl.createVertexArray();
+    if (!vertexArray) throw new Error('Unable to allocate the WebGL vertex array.');
+    gl.bindVertexArray(vertexArray);
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
-    gl.enableVertexAttribArray(positionLocation);
-    gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-    requestAnimationFrame(render);
-  })()
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([0, 0, 1, 0, 0, 1, 1, 1]), gl.STATIC_DRAW);
+    gl.enableVertexAttribArray(position);
+    gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0);
+
+    const startTime = performance.now();
+    const render = (timestamp: number) => {
+      if (disposed) return;
+      gl.useProgram(program);
+      gl.bindVertexArray(vertexArray);
+      gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+      gl.uniform2f(resolution, gl.canvas.width, gl.canvas.height);
+      // Older GLSL uses (0, 0) as the inactive mouse sentinel.
+      const active = mousePosition.active;
+      gl.uniform2f(mouse, active ? mousePosition.x : 0, active ? mousePosition.y : 0);
+      gl.uniform1f(mouseActive, active ? 1 : 0);
+      gl.uniform1f(fv, mousePosition.fv ?? 0);
+      gl.uniform1f(time, (timestamp - startTime) / 1000);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      frame = requestAnimationFrame(render);
+    };
+    render(startTime);
+  } catch (error) {
+    console.error('Unable to initialize the animated background:', error);
+    dispose();
+  }
+  return dispose;
 }

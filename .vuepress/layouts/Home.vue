@@ -57,7 +57,8 @@ onMounted(() => {
     window.removeEventListener('pointercancel', resetPointer);
     window.removeEventListener('pointerout', leaveWindow);
     window.removeEventListener('blur', resetPointer);
-    dispose();
+    // An instance mounted before a renderer hot update may hold the old void return.
+    if (typeof dispose === 'function') dispose();
   };
 });
 
