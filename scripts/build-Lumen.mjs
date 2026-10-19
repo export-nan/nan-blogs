@@ -21,6 +21,30 @@ async function scan(directory) {
   return files.sort();
 }
 
+function equipmentName(make, model) {
+  const manufacturer = typeof make === 'string' ? make.trim() : '';
+  const name = typeof model === 'string' ? model.trim() : '';
+  if (!name) return undefined;
+  return manufacturer && !name.toLowerCase().includes(manufacturer.toLowerCase())
+    ? `${manufacturer} ${name}` : name;
+}
+
+function photoMetadata(exif) {
+  const metadata = {};
+  const camera = equipmentName(exif?.Make, exif?.Model);
+  const lens = equipmentName(exif?.LensMake, exif?.LensModel);
+  if (camera) metadata.camera = camera;
+  if (lens) metadata.lens = lens;
+  for (const [field, tag] of Object.entries({
+    iso: 'ISO', aperture: 'FNumber', exposureTime: 'ExposureTime',
+    focalLength: 'FocalLength', focalLength35mm: 'FocalLengthIn35mmFormat',
+  })) {
+    const value = exif?.[tag];
+    if (typeof value === 'number' && Number.isFinite(value) && value > 0) metadata[field] = value;
+  }
+  return Object.keys(metadata).length ? metadata : undefined;
+}
+
 export async function buildLumen() {
   await mkdir(source, { recursive: true });
   await rm(output, { recursive: true, force: true });
@@ -30,7 +54,12 @@ export async function buildLumen() {
     const relative = path.relative(source, file);
     try {
       // Preserve camera-local dates instead of shifting EXIF dates through UTC.
-      const exif = await exifr.parse(file, { pick: ['DateTimeOriginal', 'CreateDate'], reviveValues: false }).catch(() => null);
+      const exif = await exifr.parse(file, {
+        pick: ['DateTimeOriginal', 'CreateDate', 'Make', 'Model', 'LensMake', 'LensModel',
+          'ISO', 'FNumber', 'ExposureTime', 'FocalLength', 'FocalLengthIn35mmFormat'],
+        reviveValues: false,
+      }).catch(() => null);
+      const metadata = photoMetadata(exif);
       const raw = exif?.DateTimeOriginal ?? exif?.CreateDate;
       const match = typeof raw === 'string' && raw.match(/^(\d{4})[:-](\d{2})[:-](\d{2})[ T](\d{2}):(\d{2}):(\d{2})/);
       const fallback = new Intl.DateTimeFormat('sv-SE', {
@@ -45,7 +74,7 @@ export async function buildLumen() {
         .jpeg({ quality: 80, mozjpeg: true }).toFile(path.join(output, `${id}-preview.jpg`));
       photos.push({ id, title: path.parse(file).name, capturedAt, date: capturedAt.slice(0, 10),
         preview: `/Lumen/${id}-preview.jpg`, original: `/Lumen/${id}.jpg`,
-        width: original.width, height: original.height });
+        width: original.width, height: original.height, ...(metadata ? { metadata } : {}) });
     } catch (error) {
       throw new Error(`处理照片失败：${relative} — ${error.message}`, { cause: error });
     }

@@ -1,16 +1,60 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed, nextTick, onMounted, ref } from 'vue';
 import { withBase } from 'vuepress/client';
+import ImageSkeleton from './ImageSkeleton.vue';
 
+interface PhotoMetadata {
+  camera?: string; lens?: string; iso?: number; aperture?: number;
+  exposureTime?: number; focalLength?: number; focalLength35mm?: number;
+}
 interface Photo {
   id: string; title: string; capturedAt: string; date: string;
   preview: string; original: string; width: number; height: number;
+  metadata?: PhotoMetadata;
 }
 const photos = ref<Photo[]>([]);
 const loading = ref(true);
 const failed = ref(false);
 const viewer = ref<HTMLDialogElement>();
 const selected = ref<Photo>();
+const originalImage = ref<HTMLImageElement>();
+const imageStatus = ref<'loading' | 'loaded' | 'error'>('loading');
+let viewerRequest = 0;
+const details = computed(() => {
+  const metadata = selected.value?.metadata;
+  if (!metadata) return [];
+  const items: { label: string; value: string; equipment?: boolean }[] = [];
+  if (metadata.camera) items.push({ label: '相机', value: metadata.camera, equipment: true });
+  if (metadata.lens) items.push({ label: '镜头', value: metadata.lens, equipment: true });
+  if (positive(metadata.iso)) items.push({ label: '感光度', value: `ISO ${formatNumber(metadata.iso)}` });
+  if (positive(metadata.aperture)) items.push({ label: '光圈', value: `f/${formatNumber(metadata.aperture)}` });
+  if (positive(metadata.exposureTime)) items.push({ label: '快门', value: formatExposure(metadata.exposureTime) });
+  if (positive(metadata.focalLength)) {
+    let value = `${formatNumber(metadata.focalLength)} mm`;
+    if (positive(metadata.focalLength35mm) && metadata.focalLength35mm !== metadata.focalLength) {
+      value += `（等效 ${formatNumber(metadata.focalLength35mm)} mm）`;
+    }
+    items.push({ label: '焦距', value });
+  } else if (positive(metadata.focalLength35mm)) {
+    items.push({ label: '等效焦距', value: `${formatNumber(metadata.focalLength35mm)} mm` });
+  }
+  return items;
+});
+function positive(value: number | undefined): value is number {
+  return typeof value === 'number' && Number.isFinite(value) && value > 0;
+}
+function formatNumber(value: number) {
+  return String(Number(value.toPrecision(4)));
+}
+function formatExposure(seconds: number) {
+  const reciprocal = 1 / seconds;
+  const denominator = Math.round(reciprocal);
+  // Keep fractional seconds accurate instead of rounding 0.8 s to 1/1 s.
+  if (seconds < 1 && denominator >= 2 && Math.abs(reciprocal - denominator) < 0.01) {
+    return `1/${denominator} s`;
+  }
+  return `${formatNumber(seconds)} s`;
+}
 const groups = computed(() => {
   const result = new Map<string, Photo[]>();
   for (const photo of photos.value) {
@@ -31,9 +75,34 @@ onMounted(async () => {
     loading.value = false;
   }
 });
-function open(photo: Photo) {
+async function open(photo: Photo) {
+  const request = ++viewerRequest;
+  imageStatus.value = 'loading';
   selected.value = photo;
-  viewer.value?.showModal();
+  await nextTick();
+  const dialog = viewer.value;
+  if (request !== viewerRequest || !dialog?.isConnected) return;
+  const image = originalImage.value;
+  if (image?.complete) imageStatus.value = image.naturalWidth > 0 ? 'loaded' : 'error';
+  if (!dialog.open) dialog.showModal();
+  dialog.scrollTop = 0;
+}
+function resetViewer() {
+  viewerRequest++;
+  selected.value = undefined;
+  imageStatus.value = 'loading';
+}
+function closeViewer() {
+  resetViewer();
+  viewer.value?.close();
+}
+function onViewerClose() {
+  // An earlier close event may arrive after another photo has already opened.
+  if (!viewer.value?.open) resetViewer();
+}
+function onImageState(event: Event) {
+  if (event.currentTarget !== originalImage.value) return;
+  imageStatus.value = event.type === 'load' ? 'loaded' : 'error';
 }
 </script>
 
@@ -54,15 +123,25 @@ function open(photo: Photo) {
         </figure>
       </div>
     </section>
-    <dialog ref="viewer" class="viewer" aria-label="照片原图" @click="(event) => { if (event.target === viewer) viewer?.close(); }">
+    <dialog ref="viewer" class="viewer" aria-label="照片原图" @cancel.prevent="closeViewer" @close="onViewerClose" @click="(event) => { if (event.target === viewer) closeViewer(); }">
       <template v-if="selected">
         <div class="toolbar">
           <span>{{ selected.title }}</span>
           <a :href="withBase(selected.original)" target="_blank" rel="noopener">打开全尺寸 JPG ↗</a>
-          <button type="button" autofocus aria-label="关闭原图" @click="viewer?.close()">关闭 ×</button>
+          <button type="button" autofocus aria-label="关闭原图" @click="closeViewer">关闭 ×</button>
         </div>
-        <img class="original" :src="withBase(selected.original)" :alt="selected.title">
+        <div class="original-frame" :style="{ '--photo-width': `${selected.width}px`, '--photo-ratio': selected.width / selected.height }">
+          <ImageSkeleton v-if="imageStatus === 'loading'" class="original-skeleton" label="正在加载原图…" />
+          <p v-else-if="imageStatus === 'error'" class="image-error" role="alert">原图加载失败，请关闭后重试，或打开全尺寸 JPG。</p>
+          <img :key="selected.id" ref="originalImage" v-show="imageStatus === 'loaded'" class="original" :src="withBase(selected.original)" :alt="selected.title" :width="selected.width" :height="selected.height" @load="onImageState" @error="onImageState">
+        </div>
         <p>{{ selected.date }} · {{ selected.width }} × {{ selected.height }}</p>
+        <dl v-if="details.length" class="photo-details" aria-label="拍摄参数">
+          <div v-for="item in details" :key="item.label" :class="{ equipment: item.equipment }">
+            <dt>{{ item.label }}</dt>
+            <dd>{{ item.value }}</dd>
+          </div>
+        </dl>
       </template>
     </dialog>
   </div>
@@ -90,8 +169,17 @@ figcaption time { white-space: nowrap; }
 .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; margin-bottom: 1rem; }
 .toolbar span { flex: 1; overflow-wrap: anywhere; }
 .toolbar button { padding: .4rem .7rem; cursor: pointer; border: 1px solid #8886; border-radius: 6px; background: transparent; color: inherit; }
-.original { display: block; max-width: 100%; max-height: 74dvh; width: auto; height: auto; margin: auto; object-fit: contain; }
+.original-frame { --photo-max-height: 74dvh; position: relative; width: min(100%, var(--photo-width), calc(var(--photo-max-height) * var(--photo-ratio))); aspect-ratio: var(--photo-ratio); margin: auto; }
+.original-frame > .original, .original-frame > .original-skeleton { position: absolute; inset: 0; width: 100%; height: 100%; }
+.original { display: block; object-fit: contain; }
 .viewer p { text-align: center; opacity: .65; font-size: .85rem; }
+.image-error { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; padding: 1rem; }
+.photo-details { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .9rem 1rem; margin: 1rem 0 0; padding: 1rem .25rem .25rem; border-top: 1px solid #8883; }
+.photo-details .equipment { grid-column: span 2; }
+.photo-details dt { font-size: .75rem; opacity: .65; }
+.photo-details dd { margin: .2rem 0 0; font-size: .85rem; overflow-wrap: anywhere; }
+@media (min-width: 601px) { .original-frame { --photo-max-height: min(74dvh, max(12rem, calc(94dvh - 19rem))); } }
+@media (max-width: 600px) { .photo-details { grid-template-columns: repeat(2, minmax(0, 1fr)); } .photo-details .equipment { grid-column: 1 / -1; } }
 @media (max-width: 480px) { .month { padding-left: 1rem; } .photo-wall { columns: 2; column-gap: .5rem; } figure { margin-bottom: .65rem; } }
 @media (prefers-reduced-motion: reduce) { .thumbnail { transition: none; } }
 </style>
