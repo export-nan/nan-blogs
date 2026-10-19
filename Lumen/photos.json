@@ -7,7 +7,16 @@
     "preview": "/Lumen/15b7807785449a236087-preview.jpg",
     "original": "/Lumen/15b7807785449a236087.jpg",
     "width": 5745,
-    "height": 3830
+    "height": 3830,
+    "metadata": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "FE 70-200mm F2.8 GM OSS II",
+      "iso": 80,
+      "aperture": 2.8,
+      "exposureTime": 0.008,
+      "focalLength": 200,
+      "focalLength35mm": 300
+    }
   },
   {
     "id": "70f485d5d21344ece287",
@@ -17,7 +26,16 @@
     "preview": "/Lumen/70f485d5d21344ece287-preview.jpg",
     "original": "/Lumen/70f485d5d21344ece287.jpg",
     "width": 4608,
-    "height": 3072
+    "height": 3072,
+    "metadata": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "FE 70-200mm F2.8 GM OSS II",
+      "iso": 64,
+      "aperture": 2.8,
+      "exposureTime": 0.01,
+      "focalLength": 70,
+      "focalLength35mm": 105
+    }
   },
   {
     "id": "56b9e0903da5123c6a0a",
@@ -27,7 +45,16 @@
     "preview": "/Lumen/56b9e0903da5123c6a0a-preview.jpg",
     "original": "/Lumen/56b9e0903da5123c6a0a.jpg",
     "width": 4672,
-    "height": 7008
+    "height": 7008,
+    "metadata": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
+      "iso": 160,
+      "aperture": 6.3,
+      "exposureTime": 0.01,
+      "focalLength": 122.7,
+      "focalLength35mm": 122
+    }
   },
   {
     "id": "4c9686d9523fa9b79be6",
@@ -37,7 +64,16 @@
     "preview": "/Lumen/4c9686d9523fa9b79be6-preview.jpg",
     "original": "/Lumen/4c9686d9523fa9b79be6.jpg",
     "width": 7008,
-    "height": 4672
+    "height": 4672,
+    "metadata": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
+      "iso": 400,
+      "aperture": 8,
+      "exposureTime": 0.00625,
+      "focalLength": 34.6,
+      "focalLength35mm": 34
+    }
   },
   {
     "id": "52e003383a4b05274575",
@@ -47,7 +83,16 @@
     "preview": "/Lumen/52e003383a4b05274575-preview.jpg",
     "original": "/Lumen/52e003383a4b05274575.jpg",
     "width": 7008,
-    "height": 4672
+    "height": 4672,
+    "metadata": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
+      "iso": 160,
+      "aperture": 9,
+      "exposureTime": 0.004,
+      "focalLength": 168.7,
+      "focalLength35mm": 168
+    }
   },
   {
     "id": "62f3b6d19857184a849c",
@@ -57,7 +102,16 @@
     "preview": "/Lumen/62f3b6d19857184a849c-preview.jpg",
     "original": "/Lumen/62f3b6d19857184a849c.jpg",
     "width": 7008,
-    "height": 4672
+    "height": 4672,
+    "metadata": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
+      "iso": 500,
+      "aperture": 6.3,
+      "exposureTime": 0.005,
+      "focalLength": 93.2,
+      "focalLength35mm": 93
+    }
   },
   {
     "id": "18046b865e888192aa4f",
@@ -67,7 +121,16 @@
     "preview": "/Lumen/18046b865e888192aa4f-preview.jpg",
     "original": "/Lumen/18046b865e888192aa4f.jpg",
     "width": 7008,
-    "height": 4672
+    "height": 4672,
+    "metadata": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
+      "iso": 1250,
+      "aperture": 8,
+      "exposureTime": 0.005,
+      "focalLength": 50,
+      "focalLength35mm": 50
+    }
   },
   {
     "id": "2ac8d9ce655e44e3b9c7",
@@ -77,7 +140,16 @@
     "preview": "/Lumen/2ac8d9ce655e44e3b9c7-preview.jpg",
     "original": "/Lumen/2ac8d9ce655e44e3b9c7.jpg",
     "width": 7008,
-    "height": 4672
+    "height": 4672,
+    "metadata": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
+      "iso": 800,
+      "aperture": 9,
+      "exposureTime": 0.004,
+      "focalLength": 52.2,
+      "focalLength35mm": 52
+    }
   },
   {
     "id": "328b187d3d5ac36428b9",
@@ -87,7 +159,16 @@
     "preview": "/Lumen/328b187d3d5ac36428b9-preview.jpg",
     "original": "/Lumen/328b187d3d5ac36428b9.jpg",
     "width": 6961,
-    "height": 4641
+    "height": 4641,
+    "metadata": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
+      "iso": 160,
+      "aperture": 11,
+      "exposureTime": 0.002,
+      "focalLength": 99.4,
+      "focalLength35mm": 99
+    }
   },
   {
     "id": "43f0745b0cc1f91819f0",
@@ -97,7 +178,16 @@
     "preview": "/Lumen/43f0745b0cc1f91819f0-preview.jpg",
     "original": "/Lumen/43f0745b0cc1f91819f0.jpg",
     "width": 4513,
-    "height": 3009
+    "height": 3009,
+    "metadata": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
+      "iso": 500,
+      "aperture": 8,
+      "exposureTime": 0.001,
+      "focalLength": 200,
+      "focalLength35mm": 200
+    }
   },
   {
     "id": "9b212fc1204d5f16cfbc",
@@ -107,7 +197,16 @@
     "preview": "/Lumen/9b212fc1204d5f16cfbc-preview.jpg",
     "original": "/Lumen/9b212fc1204d5f16cfbc.jpg",
     "width": 7008,
-    "height": 4672
+    "height": 4672,
+    "metadata": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
+      "iso": 640,
+      "aperture": 7.1,
+      "exposureTime": 0.00625,
+      "focalLength": 49,
+      "focalLength35mm": 49
+    }
   },
   {
     "id": "b8d248c8bdff41949802",
@@ -117,7 +216,16 @@
     "preview": "/Lumen/b8d248c8bdff41949802-preview.jpg",
     "original": "/Lumen/b8d248c8bdff41949802.jpg",
     "width": 7001,
-    "height": 4667
+    "height": 4667,
+    "metadata": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
+      "iso": 320,
+      "aperture": 8,
+      "exposureTime": 0.4,
+      "focalLength": 20.1,
+      "focalLength35mm": 20
+    }
   },
   {
     "id": "4dd64399b970e1961a4b",
@@ -127,6 +235,15 @@
     "preview": "/Lumen/4dd64399b970e1961a4b-preview.jpg",
     "original": "/Lumen/4dd64399b970e1961a4b.jpg",
     "width": 4672,
-    "height": 7008
+    "height": 7008,
+    "metadata": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
+      "iso": 320,
+      "aperture": 6.3,
+      "exposureTime": 0.05,
+      "focalLength": 106,
+      "focalLength35mm": 106
+    }
   }
 ]
