@@ -69,11 +69,13 @@ export async function buildLumen() {
       const capturedAt = match ? `${match[1]}-${match[2]}-${match[3]}T${match[4]}:${match[5]}:${match[6]}` : fallback;
       const id = createHash('sha256').update(relative).digest('hex').slice(0, 20);
       const pipeline = sharp(file).rotate().flatten({ background: '#fff' }).toColourspace('srgb');
-      const original = await pipeline.clone().jpeg({ quality: 95, mozjpeg: true }).toFile(path.join(output, `${id}.jpg`));
+      // Sequential JPEG can paint decoded rows over the preview while downloading.
+      const original = await pipeline.clone().jpeg({ quality: 95, progressive: false, mozjpeg: false }).toFile(path.join(output, `${id}.jpg`));
       await pipeline.clone().resize({ width: 720, height: 720, fit: 'inside', withoutEnlargement: true })
         .jpeg({ quality: 80, mozjpeg: true }).toFile(path.join(output, `${id}-preview.jpg`));
+      // Bypass cached progressive originals when switching to sequential encoding.
       photos.push({ id, title: path.parse(file).name, capturedAt, date: capturedAt.slice(0, 10),
-        preview: `/Lumen/${id}-preview.jpg`, original: `/Lumen/${id}.jpg`,
+        preview: `/Lumen/${id}-preview.jpg`, original: `/Lumen/${id}.jpg?v=sequential-1`,
         width: original.width, height: original.height, ...(metadata ? { metadata } : {}) });
     } catch (error) {
       throw new Error(`处理照片失败：${relative} — ${error.message}`, { cause: error });

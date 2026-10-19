@@ -18,6 +18,8 @@ const failed = ref(false);
 const viewer = ref<HTMLDialogElement>();
 const selected = ref<Photo>();
 const originalImage = ref<HTMLImageElement>();
+const previewImage = ref<HTMLImageElement>();
+const previewReady = ref(false);
 const imageStatus = ref<'loading' | 'loaded' | 'error'>('loading');
 let viewerRequest = 0;
 const details = computed(() => {
@@ -78,10 +80,13 @@ onMounted(async () => {
 async function open(photo: Photo) {
   const request = ++viewerRequest;
   imageStatus.value = 'loading';
+  previewReady.value = false;
   selected.value = photo;
   await nextTick();
   const dialog = viewer.value;
   if (request !== viewerRequest || !dialog?.isConnected) return;
+  const preview = previewImage.value;
+  if (preview?.complete && preview.naturalWidth > 0) previewReady.value = true;
   const image = originalImage.value;
   if (image?.complete) imageStatus.value = image.naturalWidth > 0 ? 'loaded' : 'error';
   if (!dialog.open) dialog.showModal();
@@ -90,6 +95,7 @@ async function open(photo: Photo) {
 function resetViewer() {
   viewerRequest++;
   selected.value = undefined;
+  previewReady.value = false;
   imageStatus.value = 'loading';
 }
 function closeViewer() {
@@ -103,6 +109,10 @@ function onViewerClose() {
 function onImageState(event: Event) {
   if (event.currentTarget !== originalImage.value) return;
   imageStatus.value = event.type === 'load' ? 'loaded' : 'error';
+}
+function onPreviewState(event: Event) {
+  if (event.currentTarget !== previewImage.value) return;
+  previewReady.value = event.type === 'load';
 }
 </script>
 
@@ -133,9 +143,11 @@ function onImageState(event: Event) {
           <button type="button" autofocus aria-label="关闭原图" @click="closeViewer">关闭 ×</button>
         </div>
         <div class="original-frame" :style="{ '--photo-width': `${selected.width}px`, '--photo-ratio': selected.width / selected.height }">
-          <ImageSkeleton v-if="imageStatus === 'loading'" class="original-skeleton" label="正在加载原图…" />
-          <p v-else-if="imageStatus === 'error'" class="image-error" role="alert">原图加载失败，请关闭后重试，或打开全尺寸 JPG。</p>
-          <img :key="selected.id" ref="originalImage" v-show="imageStatus === 'loaded'" class="original" :src="withBase(selected.original)" :alt="selected.title" :width="selected.width" :height="selected.height" @load="onImageState" @error="onImageState">
+          <ImageSkeleton v-if="imageStatus === 'loading' && !previewReady" class="original-skeleton" label="正在加载照片…" />
+          <img :key="`preview-${selected.id}`" ref="previewImage" v-show="previewReady" class="original-preview" :src="withBase(selected.preview)" alt="" aria-hidden="true" :width="selected.width" :height="selected.height" @load="onPreviewState" @error="onPreviewState">
+          <img :key="selected.id" ref="originalImage" v-show="imageStatus !== 'error'" class="original" :src="withBase(selected.original)" :alt="selected.title" :width="selected.width" :height="selected.height" @load="onImageState" @error="onImageState">
+          <span v-if="imageStatus === 'loading' && previewReady" class="image-loading" role="status">正在加载原图…</span>
+          <p v-if="imageStatus === 'error'" class="image-error" role="alert">原图加载失败，请关闭后重试，或打开全尺寸 JPG。</p>
         </div>
         <p>{{ selected.date }} · {{ selected.width }} × {{ selected.height }}</p>
         <dl v-if="details.length" class="photo-details" aria-label="拍摄参数">
@@ -174,10 +186,12 @@ figcaption time { white-space: nowrap; }
 .toolbar span { flex: 1; overflow-wrap: anywhere; }
 .toolbar button { padding: .4rem .7rem; cursor: pointer; border: 1px solid #8886; border-radius: 6px; background: transparent; color: inherit; }
 .original-frame { --photo-max-height: 74dvh; position: relative; width: min(100%, var(--photo-width), calc(var(--photo-max-height) * var(--photo-ratio))); aspect-ratio: var(--photo-ratio); margin: auto; }
-.original-frame > .original, .original-frame > .original-skeleton { position: absolute; inset: 0; width: 100%; height: 100%; }
+.original-frame > .original, .original-frame > .original-preview, .original-frame > .original-skeleton { position: absolute; inset: 0; width: 100%; height: 100%; }
+.original-preview { display: block; object-fit: fill; }
 .original { display: block; object-fit: contain; }
 .viewer p { text-align: center; opacity: .65; font-size: .85rem; }
-.image-error { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; padding: 1rem; }
+.image-loading { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.viewer .image-error { position: absolute; right: .75rem; bottom: .75rem; left: .75rem; margin: 0; padding: .75rem; border-radius: 6px; background: var(--vp-c-bg, #fff); opacity: 1; }
 .photo-details { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .9rem 1rem; margin: 1rem 0 0; padding: 1rem .25rem .25rem; border-top: 1px solid #8883; }
 .photo-details .equipment { grid-column: span 2; }
 .photo-details dt { font-size: .75rem; opacity: .65; }
