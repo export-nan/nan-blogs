@@ -154,10 +154,11 @@ function onImageState(event: Event) {
 .intro { color: var(--vp-c-text-mute, #777); }
 .intro span { display: inline-block; margin-left: 1rem; font-size: .85em; }
 .empty { padding: 4rem 1rem; text-align: center; border: 1px dashed #8886; border-radius: 16px; }
-.photo-timeline { margin-left: .4rem; border-left: 2px solid #8883; }
-.month { position: relative; margin: 0; padding: 0 0 2rem 1.5rem; }
+.photo-timeline { position: relative; }
+.photo-timeline::before { content: ''; position: absolute; top: 0; bottom: 0; left: -1rem; width: 2px; background: #8883; }
+.month { position: relative; margin: 0; padding: 0 0 2rem; }
 .month h2 { display: flex; align-items: center; gap: 1rem; margin: 0 0 1rem; border: 0; font-size: 1.25rem; padding-top: 0; }
-.month h2::before { content: ''; position: absolute; left: -6px; width: 10px; height: 10px; border-radius: 50%; background: var(--vp-c-accent, #3eaf7c); }
+.month h2::before { content: ''; position: absolute; left: calc(-1rem - 4px); width: 10px; height: 10px; border-radius: 50%; background: var(--vp-c-accent, #3eaf7c); }
 small { font-size: .7em; font-weight: normal; opacity: .6; }
 .photo-wall { columns: 3 210px; column-gap: .75rem; }
 figure { display: block; width: 100%; margin: 0 0 .9rem; min-width: 0; break-inside: avoid; }
@@ -183,6 +184,6 @@ figcaption time { white-space: nowrap; }
 .photo-details dd { margin: .2rem 0 0; font-size: .85rem; overflow-wrap: anywhere; }
 @media (min-width: 601px) { .original-frame { --photo-max-height: min(74dvh, max(12rem, calc(94dvh - 19rem))); } }
 @media (max-width: 600px) { .photo-details { grid-template-columns: repeat(2, minmax(0, 1fr)); } .photo-details .equipment { grid-column: 1 / -1; } }
-@media (max-width: 480px) { .month { padding-left: 1rem; } .photo-wall { columns: 2; column-gap: .5rem; } figure { margin-bottom: .65rem; } }
+@media (max-width: 480px) { .photo-wall { columns: 2; column-gap: .5rem; } figure { margin-bottom: .65rem; } }
 @media (prefers-reduced-motion: reduce) { .thumbnail { transition: none; } }
 </style>

@@ -2,6 +2,7 @@
 title: 摄影
 icon: camera
 sidebar: false
+toc: false
 article: false
 timeline: false
 pageInfo: false
