@@ -2,6 +2,7 @@
 import { computed, nextTick, onMounted, ref } from 'vue';
 import { withBase } from 'vuepress/client';
 import ImageSkeleton from './ImageSkeleton.vue';
+import LazyImage from './LazyImage.vue';
 
 interface PhotoMetadata {
   camera?: string; lens?: string; iso?: number; aperture?: number;
@@ -128,7 +129,7 @@ function onPreviewState(event: Event) {
         <div class="photo-wall">
           <figure v-for="photo in group.items" :key="photo.id">
             <button class="thumbnail" type="button" :aria-label="`查看原图：${photo.title}`" @click="open(photo)">
-              <img :src="withBase(photo.preview)" :alt="photo.title" :width="photo.width" :height="photo.height" loading="lazy" decoding="async">
+              <LazyImage :src="withBase(photo.preview)" :alt="photo.title" :width="photo.width" :height="photo.height" />
             </button>
             <figcaption><span>{{ photo.title }}</span><time :datetime="photo.date">{{ photo.date.replaceAll('-', '.') }}</time></figcaption>
           </figure>
@@ -175,7 +176,6 @@ small { font-size: .7em; font-weight: normal; opacity: .6; }
 .photo-wall { columns: 3 210px; column-gap: .75rem; }
 figure { display: block; width: 100%; margin: 0 0 .9rem; min-width: 0; break-inside: avoid; }
 .thumbnail { display: block; padding: 0; border: 0; width: 100%; background: #8881; border-radius: 6px; overflow: hidden; cursor: zoom-in; transition: box-shadow .2s; }
-.thumbnail img { display: block; width: 100%; height: auto; }
 .thumbnail:hover { box-shadow: 0 4px 14px #0002; }
 .thumbnail:focus-visible { outline: 3px solid var(--vp-c-accent, #3eaf7c); outline-offset: 3px; }
 figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .2rem .5rem; padding: .4rem .1rem 0; font-size: .75rem; overflow-wrap: anywhere; opacity: .7; }

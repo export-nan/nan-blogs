@@ -72,10 +72,10 @@ export async function buildLumen() {
       // Sequential JPEG can paint decoded rows over the preview while downloading.
       const original = await pipeline.clone().jpeg({ quality: 95, progressive: false, mozjpeg: false }).toFile(path.join(output, `${id}.jpg`));
       await pipeline.clone().resize({ width: 720, height: 720, fit: 'inside', withoutEnlargement: true })
-        .jpeg({ quality: 80, mozjpeg: true }).toFile(path.join(output, `${id}-preview.jpg`));
+        .webp({ lossless: true, effort: 4 }).toFile(path.join(output, `${id}-preview.webp`));
       // Bypass cached progressive originals when switching to sequential encoding.
       photos.push({ id, title: path.parse(file).name, capturedAt, date: capturedAt.slice(0, 10),
-        preview: `/Lumen/${id}-preview.jpg`, original: `/Lumen/${id}.jpg?v=sequential-1`,
+        preview: `/Lumen/${id}-preview.webp`, original: `/Lumen/${id}.jpg?v=sequential-1`,
         width: original.width, height: original.height, ...(metadata ? { metadata } : {}) });
     } catch (error) {
       throw new Error(`处理照片失败：${relative} — ${error.message}`, { cause: error });
