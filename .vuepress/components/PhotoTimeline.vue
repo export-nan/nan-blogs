@@ -112,17 +112,19 @@ function onImageState(event: Event) {
     <p v-if="loading" role="status">正在加载照片…</p>
     <p v-else-if="failed" role="alert">照片加载失败，请刷新页面重试。</p>
     <div v-else-if="!photos.length" class="empty">还没有照片，期待第一段光影故事。</div>
-    <section v-for="group in groups" :key="group.month" class="month">
-      <h2><time :datetime="group.month">{{ group.month.replace('-', ' 年 ') }} 月</time><small>{{ group.items.length }} 张</small></h2>
-      <div class="photo-wall">
-        <figure v-for="photo in group.items" :key="photo.id">
-          <button class="thumbnail" type="button" :aria-label="`查看原图：${photo.title}`" @click="open(photo)">
-            <img :src="withBase(photo.preview)" :alt="photo.title" :width="photo.width" :height="photo.height" loading="lazy" decoding="async">
-          </button>
-          <figcaption><span>{{ photo.title }}</span><time :datetime="photo.date">{{ photo.date.replaceAll('-', '.') }}</time></figcaption>
-        </figure>
-      </div>
-    </section>
+    <div v-if="groups.length" class="photo-timeline">
+      <section v-for="group in groups" :key="group.month" class="month">
+        <h2><time :datetime="group.month">{{ group.month.replace('-', ' 年 ') }} 月</time><small>{{ group.items.length }} 张</small></h2>
+        <div class="photo-wall">
+          <figure v-for="photo in group.items" :key="photo.id">
+            <button class="thumbnail" type="button" :aria-label="`查看原图：${photo.title}`" @click="open(photo)">
+              <img :src="withBase(photo.preview)" :alt="photo.title" :width="photo.width" :height="photo.height" loading="lazy" decoding="async">
+            </button>
+            <figcaption><span>{{ photo.title }}</span><time :datetime="photo.date">{{ photo.date.replaceAll('-', '.') }}</time></figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
     <dialog ref="viewer" class="viewer" aria-label="照片原图" @cancel.prevent="closeViewer" @close="onViewerClose" @click="(event) => { if (event.target === viewer) closeViewer(); }">
       <template v-if="selected">
         <div class="toolbar">
@@ -152,8 +154,9 @@ function onImageState(event: Event) {
 .intro { color: var(--vp-c-text-mute, #777); }
 .intro span { display: inline-block; margin-left: 1rem; font-size: .85em; }
 .empty { padding: 4rem 1rem; text-align: center; border: 1px dashed #8886; border-radius: 16px; }
-.month { position: relative; margin-left: .4rem; padding: 0 0 2rem 1.5rem; border-left: 2px solid #8883; }
-.month h2 { display: flex; align-items: center; gap: 1rem; border: 0; font-size: 1.25rem; padding-top: 0; }
+.photo-timeline { margin-left: .4rem; border-left: 2px solid #8883; }
+.month { position: relative; margin: 0; padding: 0 0 2rem 1.5rem; }
+.month h2 { display: flex; align-items: center; gap: 1rem; margin: 0 0 1rem; border: 0; font-size: 1.25rem; padding-top: 0; }
 .month h2::before { content: ''; position: absolute; left: -6px; width: 10px; height: 10px; border-radius: 50%; background: var(--vp-c-accent, #3eaf7c); }
 small { font-size: .7em; font-weight: normal; opacity: .6; }
 .photo-wall { columns: 3 210px; column-gap: .75rem; }
