@@ -73,14 +73,14 @@ export async function buildLumen() {
       const pipeline = sharp(data, { raw: { width: info.width, height: info.height, channels: info.channels } });
       // Sequential JPEG can paint decoded rows over the preview while downloading.
       const original = await pipeline.clone().jpeg({ quality: 95, progressive: false, mozjpeg: false }).toFile(path.join(output, `${id}.jpg`));
-      await pipeline.clone().resize({ width: 720, height: 720, fit: 'inside', withoutEnlargement: true })
-        .webp({ lossless: true, effort: 4 }).toFile(path.join(output, `${id}-preview.webp`));
+      await pipeline.clone().resize({ width: 480, height: 480, fit: 'inside', withoutEnlargement: true })
+        .webp({ lossless: true, effort: 6 }).toFile(path.join(output, `${id}-preview.webp`));
       // Align square tiles to JPEG MCU boundaries, with at most 8 by 8 tiles.
       const tileSize = Math.ceil(Math.max(1024, info.width / 8, info.height / 8) / 16) * 16;
       const revision = createHash('sha256').update(data).update(JSON.stringify({
         version: 2, width: info.width, height: info.height, channels: info.channels, tileSize,
         jpeg: { quality: 95, progressive: false, mozjpeg: false },
-        preview: { maxEdge: 720, lossless: true, effort: 4 },
+        preview: { maxEdge: 480, lossless: true, effort: 6 },
       })).digest('hex').slice(0, 12);
       const originalTiles = [];
       for (let y = 0; y < info.height; y += tileSize) {
