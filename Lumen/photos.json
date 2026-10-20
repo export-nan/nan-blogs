@@ -4,10 +4,180 @@
     "title": "DSC09335",
     "capturedAt": "2026-09-25T18:24:01",
     "date": "2026-09-25",
-    "preview": "/Lumen/15b7807785449a236087-preview.webp",
-    "original": "/Lumen/15b7807785449a236087.jpg?v=sequential-1",
+    "preview": "/Lumen/15b7807785449a236087-preview.webp?v=89e3a9b64960",
+    "original": "/Lumen/15b7807785449a236087.jpg?v=sequential-1-89e3a9b64960",
     "width": 5745,
     "height": 3830,
+    "originalTiles": [
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-0.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-1.jpg",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-2.jpg",
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-3.jpg",
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-4.jpg",
+        "x": 4096,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-5.jpg",
+        "x": 5120,
+        "y": 0,
+        "width": 625,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-6.jpg",
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-7.jpg",
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-8.jpg",
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-9.jpg",
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-10.jpg",
+        "x": 4096,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-11.jpg",
+        "x": 5120,
+        "y": 1024,
+        "width": 625,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-12.jpg",
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-13.jpg",
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-14.jpg",
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-15.jpg",
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-16.jpg",
+        "x": 4096,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-17.jpg",
+        "x": 5120,
+        "y": 2048,
+        "width": 625,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-18.jpg",
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 758
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-19.jpg",
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 758
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-20.jpg",
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 758
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-21.jpg",
+        "x": 3072,
+        "y": 3072,
+        "width": 1024,
+        "height": 758
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-22.jpg",
+        "x": 4096,
+        "y": 3072,
+        "width": 1024,
+        "height": 758
+      },
+      {
+        "src": "/Lumen/15b7807785449a236087-89e3a9b64960-tile-23.jpg",
+        "x": 5120,
+        "y": 3072,
+        "width": 625,
+        "height": 758
+      }
+    ],
     "metadata": {
       "camera": "SONY ILCE-7CM2",
       "lens": "FE 70-200mm F2.8 GM OSS II",
@@ -23,10 +193,117 @@
     "title": "DSC09271",
     "capturedAt": "2026-09-25T18:01:46",
     "date": "2026-09-25",
-    "preview": "/Lumen/70f485d5d21344ece287-preview.webp",
-    "original": "/Lumen/70f485d5d21344ece287.jpg?v=sequential-1",
+    "preview": "/Lumen/70f485d5d21344ece287-preview.webp?v=56ca5ba503d8",
+    "original": "/Lumen/70f485d5d21344ece287.jpg?v=sequential-1-56ca5ba503d8",
     "width": 4608,
     "height": 3072,
+    "originalTiles": [
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-0.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-1.jpg",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-2.jpg",
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-3.jpg",
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-4.jpg",
+        "x": 4096,
+        "y": 0,
+        "width": 512,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-5.jpg",
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-6.jpg",
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-7.jpg",
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-8.jpg",
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-9.jpg",
+        "x": 4096,
+        "y": 1024,
+        "width": 512,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-10.jpg",
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-11.jpg",
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-12.jpg",
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-13.jpg",
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/70f485d5d21344ece287-56ca5ba503d8-tile-14.jpg",
+        "x": 4096,
+        "y": 2048,
+        "width": 512,
+        "height": 1024
+      }
+    ],
     "metadata": {
       "camera": "SONY ILCE-7CM2",
       "lens": "FE 70-200mm F2.8 GM OSS II",
@@ -42,10 +319,257 @@
     "title": "DSC09120",
     "capturedAt": "2026-08-30T16:13:34",
     "date": "2026-08-30",
-    "preview": "/Lumen/56b9e0903da5123c6a0a-preview.webp",
-    "original": "/Lumen/56b9e0903da5123c6a0a.jpg?v=sequential-1",
+    "preview": "/Lumen/56b9e0903da5123c6a0a-preview.webp?v=2c56904c0cd1",
+    "original": "/Lumen/56b9e0903da5123c6a0a.jpg?v=sequential-1-2c56904c0cd1",
     "width": 4672,
     "height": 7008,
+    "originalTiles": [
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-0.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-1.jpg",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-2.jpg",
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-3.jpg",
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-4.jpg",
+        "x": 4096,
+        "y": 0,
+        "width": 576,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-5.jpg",
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-6.jpg",
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-7.jpg",
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-8.jpg",
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-9.jpg",
+        "x": 4096,
+        "y": 1024,
+        "width": 576,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-10.jpg",
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-11.jpg",
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-12.jpg",
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-13.jpg",
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-14.jpg",
+        "x": 4096,
+        "y": 2048,
+        "width": 576,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-15.jpg",
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-16.jpg",
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-17.jpg",
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-18.jpg",
+        "x": 3072,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-19.jpg",
+        "x": 4096,
+        "y": 3072,
+        "width": 576,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-20.jpg",
+        "x": 0,
+        "y": 4096,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-21.jpg",
+        "x": 1024,
+        "y": 4096,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-22.jpg",
+        "x": 2048,
+        "y": 4096,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-23.jpg",
+        "x": 3072,
+        "y": 4096,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-24.jpg",
+        "x": 4096,
+        "y": 4096,
+        "width": 576,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-25.jpg",
+        "x": 0,
+        "y": 5120,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-26.jpg",
+        "x": 1024,
+        "y": 5120,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-27.jpg",
+        "x": 2048,
+        "y": 5120,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-28.jpg",
+        "x": 3072,
+        "y": 5120,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-29.jpg",
+        "x": 4096,
+        "y": 5120,
+        "width": 576,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-30.jpg",
+        "x": 0,
+        "y": 6144,
+        "width": 1024,
+        "height": 864
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-31.jpg",
+        "x": 1024,
+        "y": 6144,
+        "width": 1024,
+        "height": 864
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-32.jpg",
+        "x": 2048,
+        "y": 6144,
+        "width": 1024,
+        "height": 864
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-33.jpg",
+        "x": 3072,
+        "y": 6144,
+        "width": 1024,
+        "height": 864
+      },
+      {
+        "src": "/Lumen/56b9e0903da5123c6a0a-2c56904c0cd1-tile-34.jpg",
+        "x": 4096,
+        "y": 6144,
+        "width": 576,
+        "height": 864
+      }
+    ],
     "metadata": {
       "camera": "SONY ILCE-7CM2",
       "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
@@ -61,10 +585,257 @@
     "title": "DSC07901-2",
     "capturedAt": "2026-06-20T17:46:01",
     "date": "2026-06-20",
-    "preview": "/Lumen/4c9686d9523fa9b79be6-preview.webp",
-    "original": "/Lumen/4c9686d9523fa9b79be6.jpg?v=sequential-1",
+    "preview": "/Lumen/4c9686d9523fa9b79be6-preview.webp?v=d2c66c02eb39",
+    "original": "/Lumen/4c9686d9523fa9b79be6.jpg?v=sequential-1-d2c66c02eb39",
     "width": 7008,
     "height": 4672,
+    "originalTiles": [
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-0.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-1.jpg",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-2.jpg",
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-3.jpg",
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-4.jpg",
+        "x": 4096,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-5.jpg",
+        "x": 5120,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-6.jpg",
+        "x": 6144,
+        "y": 0,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-7.jpg",
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-8.jpg",
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-9.jpg",
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-10.jpg",
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-11.jpg",
+        "x": 4096,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-12.jpg",
+        "x": 5120,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-13.jpg",
+        "x": 6144,
+        "y": 1024,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-14.jpg",
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-15.jpg",
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-16.jpg",
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-17.jpg",
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-18.jpg",
+        "x": 4096,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-19.jpg",
+        "x": 5120,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-20.jpg",
+        "x": 6144,
+        "y": 2048,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-21.jpg",
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-22.jpg",
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-23.jpg",
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-24.jpg",
+        "x": 3072,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-25.jpg",
+        "x": 4096,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-26.jpg",
+        "x": 5120,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-27.jpg",
+        "x": 6144,
+        "y": 3072,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-28.jpg",
+        "x": 0,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-29.jpg",
+        "x": 1024,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-30.jpg",
+        "x": 2048,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-31.jpg",
+        "x": 3072,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-32.jpg",
+        "x": 4096,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-33.jpg",
+        "x": 5120,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/4c9686d9523fa9b79be6-d2c66c02eb39-tile-34.jpg",
+        "x": 6144,
+        "y": 4096,
+        "width": 864,
+        "height": 576
+      }
+    ],
     "metadata": {
       "camera": "SONY ILCE-7CM2",
       "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
@@ -80,10 +851,257 @@
     "title": "DSC07845-2",
     "capturedAt": "2026-06-20T17:17:32",
     "date": "2026-06-20",
-    "preview": "/Lumen/52e003383a4b05274575-preview.webp",
-    "original": "/Lumen/52e003383a4b05274575.jpg?v=sequential-1",
+    "preview": "/Lumen/52e003383a4b05274575-preview.webp?v=e264469b111c",
+    "original": "/Lumen/52e003383a4b05274575.jpg?v=sequential-1-e264469b111c",
     "width": 7008,
     "height": 4672,
+    "originalTiles": [
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-0.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-1.jpg",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-2.jpg",
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-3.jpg",
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-4.jpg",
+        "x": 4096,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-5.jpg",
+        "x": 5120,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-6.jpg",
+        "x": 6144,
+        "y": 0,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-7.jpg",
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-8.jpg",
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-9.jpg",
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-10.jpg",
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-11.jpg",
+        "x": 4096,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-12.jpg",
+        "x": 5120,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-13.jpg",
+        "x": 6144,
+        "y": 1024,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-14.jpg",
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-15.jpg",
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-16.jpg",
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-17.jpg",
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-18.jpg",
+        "x": 4096,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-19.jpg",
+        "x": 5120,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-20.jpg",
+        "x": 6144,
+        "y": 2048,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-21.jpg",
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-22.jpg",
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-23.jpg",
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-24.jpg",
+        "x": 3072,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-25.jpg",
+        "x": 4096,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-26.jpg",
+        "x": 5120,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-27.jpg",
+        "x": 6144,
+        "y": 3072,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-28.jpg",
+        "x": 0,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-29.jpg",
+        "x": 1024,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-30.jpg",
+        "x": 2048,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-31.jpg",
+        "x": 3072,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-32.jpg",
+        "x": 4096,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-33.jpg",
+        "x": 5120,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/52e003383a4b05274575-e264469b111c-tile-34.jpg",
+        "x": 6144,
+        "y": 4096,
+        "width": 864,
+        "height": 576
+      }
+    ],
     "metadata": {
       "camera": "SONY ILCE-7CM2",
       "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
@@ -99,10 +1117,257 @@
     "title": "DSC07486",
     "capturedAt": "2026-06-19T15:31:04",
     "date": "2026-06-19",
-    "preview": "/Lumen/62f3b6d19857184a849c-preview.webp",
-    "original": "/Lumen/62f3b6d19857184a849c.jpg?v=sequential-1",
+    "preview": "/Lumen/62f3b6d19857184a849c-preview.webp?v=10cba1c28d5b",
+    "original": "/Lumen/62f3b6d19857184a849c.jpg?v=sequential-1-10cba1c28d5b",
     "width": 7008,
     "height": 4672,
+    "originalTiles": [
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-0.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-1.jpg",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-2.jpg",
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-3.jpg",
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-4.jpg",
+        "x": 4096,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-5.jpg",
+        "x": 5120,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-6.jpg",
+        "x": 6144,
+        "y": 0,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-7.jpg",
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-8.jpg",
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-9.jpg",
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-10.jpg",
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-11.jpg",
+        "x": 4096,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-12.jpg",
+        "x": 5120,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-13.jpg",
+        "x": 6144,
+        "y": 1024,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-14.jpg",
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-15.jpg",
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-16.jpg",
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-17.jpg",
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-18.jpg",
+        "x": 4096,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-19.jpg",
+        "x": 5120,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-20.jpg",
+        "x": 6144,
+        "y": 2048,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-21.jpg",
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-22.jpg",
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-23.jpg",
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-24.jpg",
+        "x": 3072,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-25.jpg",
+        "x": 4096,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-26.jpg",
+        "x": 5120,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-27.jpg",
+        "x": 6144,
+        "y": 3072,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-28.jpg",
+        "x": 0,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-29.jpg",
+        "x": 1024,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-30.jpg",
+        "x": 2048,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-31.jpg",
+        "x": 3072,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-32.jpg",
+        "x": 4096,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-33.jpg",
+        "x": 5120,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/62f3b6d19857184a849c-10cba1c28d5b-tile-34.jpg",
+        "x": 6144,
+        "y": 4096,
+        "width": 864,
+        "height": 576
+      }
+    ],
     "metadata": {
       "camera": "SONY ILCE-7CM2",
       "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
@@ -118,10 +1383,257 @@
     "title": "DSC07110",
     "capturedAt": "2026-06-13T15:43:18",
     "date": "2026-06-13",
-    "preview": "/Lumen/18046b865e888192aa4f-preview.webp",
-    "original": "/Lumen/18046b865e888192aa4f.jpg?v=sequential-1",
+    "preview": "/Lumen/18046b865e888192aa4f-preview.webp?v=3499297e129a",
+    "original": "/Lumen/18046b865e888192aa4f.jpg?v=sequential-1-3499297e129a",
     "width": 7008,
     "height": 4672,
+    "originalTiles": [
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-0.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-1.jpg",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-2.jpg",
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-3.jpg",
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-4.jpg",
+        "x": 4096,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-5.jpg",
+        "x": 5120,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-6.jpg",
+        "x": 6144,
+        "y": 0,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-7.jpg",
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-8.jpg",
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-9.jpg",
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-10.jpg",
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-11.jpg",
+        "x": 4096,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-12.jpg",
+        "x": 5120,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-13.jpg",
+        "x": 6144,
+        "y": 1024,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-14.jpg",
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-15.jpg",
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-16.jpg",
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-17.jpg",
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-18.jpg",
+        "x": 4096,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-19.jpg",
+        "x": 5120,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-20.jpg",
+        "x": 6144,
+        "y": 2048,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-21.jpg",
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-22.jpg",
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-23.jpg",
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-24.jpg",
+        "x": 3072,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-25.jpg",
+        "x": 4096,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-26.jpg",
+        "x": 5120,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-27.jpg",
+        "x": 6144,
+        "y": 3072,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-28.jpg",
+        "x": 0,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-29.jpg",
+        "x": 1024,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-30.jpg",
+        "x": 2048,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-31.jpg",
+        "x": 3072,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-32.jpg",
+        "x": 4096,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-33.jpg",
+        "x": 5120,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/18046b865e888192aa4f-3499297e129a-tile-34.jpg",
+        "x": 6144,
+        "y": 4096,
+        "width": 864,
+        "height": 576
+      }
+    ],
     "metadata": {
       "camera": "SONY ILCE-7CM2",
       "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
@@ -137,10 +1649,257 @@
     "title": "DSC07103",
     "capturedAt": "2026-06-13T15:12:08",
     "date": "2026-06-13",
-    "preview": "/Lumen/2ac8d9ce655e44e3b9c7-preview.webp",
-    "original": "/Lumen/2ac8d9ce655e44e3b9c7.jpg?v=sequential-1",
+    "preview": "/Lumen/2ac8d9ce655e44e3b9c7-preview.webp?v=1d3ba863d1ee",
+    "original": "/Lumen/2ac8d9ce655e44e3b9c7.jpg?v=sequential-1-1d3ba863d1ee",
     "width": 7008,
     "height": 4672,
+    "originalTiles": [
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-0.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-1.jpg",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-2.jpg",
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-3.jpg",
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-4.jpg",
+        "x": 4096,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-5.jpg",
+        "x": 5120,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-6.jpg",
+        "x": 6144,
+        "y": 0,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-7.jpg",
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-8.jpg",
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-9.jpg",
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-10.jpg",
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-11.jpg",
+        "x": 4096,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-12.jpg",
+        "x": 5120,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-13.jpg",
+        "x": 6144,
+        "y": 1024,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-14.jpg",
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-15.jpg",
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-16.jpg",
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-17.jpg",
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-18.jpg",
+        "x": 4096,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-19.jpg",
+        "x": 5120,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-20.jpg",
+        "x": 6144,
+        "y": 2048,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-21.jpg",
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-22.jpg",
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-23.jpg",
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-24.jpg",
+        "x": 3072,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-25.jpg",
+        "x": 4096,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-26.jpg",
+        "x": 5120,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-27.jpg",
+        "x": 6144,
+        "y": 3072,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-28.jpg",
+        "x": 0,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-29.jpg",
+        "x": 1024,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-30.jpg",
+        "x": 2048,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-31.jpg",
+        "x": 3072,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-32.jpg",
+        "x": 4096,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-33.jpg",
+        "x": 5120,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/2ac8d9ce655e44e3b9c7-1d3ba863d1ee-tile-34.jpg",
+        "x": 6144,
+        "y": 4096,
+        "width": 864,
+        "height": 576
+      }
+    ],
     "metadata": {
       "camera": "SONY ILCE-7CM2",
       "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
@@ -156,10 +1915,257 @@
     "title": "DSC07051",
     "capturedAt": "2026-06-13T12:25:07",
     "date": "2026-06-13",
-    "preview": "/Lumen/328b187d3d5ac36428b9-preview.webp",
-    "original": "/Lumen/328b187d3d5ac36428b9.jpg?v=sequential-1",
+    "preview": "/Lumen/328b187d3d5ac36428b9-preview.webp?v=27a46517c454",
+    "original": "/Lumen/328b187d3d5ac36428b9.jpg?v=sequential-1-27a46517c454",
     "width": 6961,
     "height": 4641,
+    "originalTiles": [
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-0.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-1.jpg",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-2.jpg",
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-3.jpg",
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-4.jpg",
+        "x": 4096,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-5.jpg",
+        "x": 5120,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-6.jpg",
+        "x": 6144,
+        "y": 0,
+        "width": 817,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-7.jpg",
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-8.jpg",
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-9.jpg",
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-10.jpg",
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-11.jpg",
+        "x": 4096,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-12.jpg",
+        "x": 5120,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-13.jpg",
+        "x": 6144,
+        "y": 1024,
+        "width": 817,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-14.jpg",
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-15.jpg",
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-16.jpg",
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-17.jpg",
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-18.jpg",
+        "x": 4096,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-19.jpg",
+        "x": 5120,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-20.jpg",
+        "x": 6144,
+        "y": 2048,
+        "width": 817,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-21.jpg",
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-22.jpg",
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-23.jpg",
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-24.jpg",
+        "x": 3072,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-25.jpg",
+        "x": 4096,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-26.jpg",
+        "x": 5120,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-27.jpg",
+        "x": 6144,
+        "y": 3072,
+        "width": 817,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-28.jpg",
+        "x": 0,
+        "y": 4096,
+        "width": 1024,
+        "height": 545
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-29.jpg",
+        "x": 1024,
+        "y": 4096,
+        "width": 1024,
+        "height": 545
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-30.jpg",
+        "x": 2048,
+        "y": 4096,
+        "width": 1024,
+        "height": 545
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-31.jpg",
+        "x": 3072,
+        "y": 4096,
+        "width": 1024,
+        "height": 545
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-32.jpg",
+        "x": 4096,
+        "y": 4096,
+        "width": 1024,
+        "height": 545
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-33.jpg",
+        "x": 5120,
+        "y": 4096,
+        "width": 1024,
+        "height": 545
+      },
+      {
+        "src": "/Lumen/328b187d3d5ac36428b9-27a46517c454-tile-34.jpg",
+        "x": 6144,
+        "y": 4096,
+        "width": 817,
+        "height": 545
+      }
+    ],
     "metadata": {
       "camera": "SONY ILCE-7CM2",
       "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
@@ -175,10 +2181,117 @@
     "title": "DSC06026",
     "capturedAt": "2026-05-17T16:24:44",
     "date": "2026-05-17",
-    "preview": "/Lumen/43f0745b0cc1f91819f0-preview.webp",
-    "original": "/Lumen/43f0745b0cc1f91819f0.jpg?v=sequential-1",
+    "preview": "/Lumen/43f0745b0cc1f91819f0-preview.webp?v=8a74a651233d",
+    "original": "/Lumen/43f0745b0cc1f91819f0.jpg?v=sequential-1-8a74a651233d",
     "width": 4513,
     "height": 3009,
+    "originalTiles": [
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-0.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-1.jpg",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-2.jpg",
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-3.jpg",
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-4.jpg",
+        "x": 4096,
+        "y": 0,
+        "width": 417,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-5.jpg",
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-6.jpg",
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-7.jpg",
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-8.jpg",
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-9.jpg",
+        "x": 4096,
+        "y": 1024,
+        "width": 417,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-10.jpg",
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 961
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-11.jpg",
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 961
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-12.jpg",
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 961
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-13.jpg",
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 961
+      },
+      {
+        "src": "/Lumen/43f0745b0cc1f91819f0-8a74a651233d-tile-14.jpg",
+        "x": 4096,
+        "y": 2048,
+        "width": 417,
+        "height": 961
+      }
+    ],
     "metadata": {
       "camera": "SONY ILCE-7CM2",
       "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
@@ -194,10 +2307,257 @@
     "title": "DSC05817",
     "capturedAt": "2026-05-16T17:41:10",
     "date": "2026-05-16",
-    "preview": "/Lumen/9b212fc1204d5f16cfbc-preview.webp",
-    "original": "/Lumen/9b212fc1204d5f16cfbc.jpg?v=sequential-1",
+    "preview": "/Lumen/9b212fc1204d5f16cfbc-preview.webp?v=f4428b5b3079",
+    "original": "/Lumen/9b212fc1204d5f16cfbc.jpg?v=sequential-1-f4428b5b3079",
     "width": 7008,
     "height": 4672,
+    "originalTiles": [
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-0.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-1.jpg",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-2.jpg",
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-3.jpg",
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-4.jpg",
+        "x": 4096,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-5.jpg",
+        "x": 5120,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-6.jpg",
+        "x": 6144,
+        "y": 0,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-7.jpg",
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-8.jpg",
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-9.jpg",
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-10.jpg",
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-11.jpg",
+        "x": 4096,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-12.jpg",
+        "x": 5120,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-13.jpg",
+        "x": 6144,
+        "y": 1024,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-14.jpg",
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-15.jpg",
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-16.jpg",
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-17.jpg",
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-18.jpg",
+        "x": 4096,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-19.jpg",
+        "x": 5120,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-20.jpg",
+        "x": 6144,
+        "y": 2048,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-21.jpg",
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-22.jpg",
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-23.jpg",
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-24.jpg",
+        "x": 3072,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-25.jpg",
+        "x": 4096,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-26.jpg",
+        "x": 5120,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-27.jpg",
+        "x": 6144,
+        "y": 3072,
+        "width": 864,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-28.jpg",
+        "x": 0,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-29.jpg",
+        "x": 1024,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-30.jpg",
+        "x": 2048,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-31.jpg",
+        "x": 3072,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-32.jpg",
+        "x": 4096,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-33.jpg",
+        "x": 5120,
+        "y": 4096,
+        "width": 1024,
+        "height": 576
+      },
+      {
+        "src": "/Lumen/9b212fc1204d5f16cfbc-f4428b5b3079-tile-34.jpg",
+        "x": 6144,
+        "y": 4096,
+        "width": 864,
+        "height": 576
+      }
+    ],
     "metadata": {
       "camera": "SONY ILCE-7CM2",
       "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
@@ -213,10 +2573,257 @@
     "title": "DSC05539",
     "capturedAt": "2026-05-07T19:16:42",
     "date": "2026-05-07",
-    "preview": "/Lumen/b8d248c8bdff41949802-preview.webp",
-    "original": "/Lumen/b8d248c8bdff41949802.jpg?v=sequential-1",
+    "preview": "/Lumen/b8d248c8bdff41949802-preview.webp?v=2d4b9cea87c4",
+    "original": "/Lumen/b8d248c8bdff41949802.jpg?v=sequential-1-2d4b9cea87c4",
     "width": 7001,
     "height": 4667,
+    "originalTiles": [
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-0.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-1.jpg",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-2.jpg",
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-3.jpg",
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-4.jpg",
+        "x": 4096,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-5.jpg",
+        "x": 5120,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-6.jpg",
+        "x": 6144,
+        "y": 0,
+        "width": 857,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-7.jpg",
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-8.jpg",
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-9.jpg",
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-10.jpg",
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-11.jpg",
+        "x": 4096,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-12.jpg",
+        "x": 5120,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-13.jpg",
+        "x": 6144,
+        "y": 1024,
+        "width": 857,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-14.jpg",
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-15.jpg",
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-16.jpg",
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-17.jpg",
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-18.jpg",
+        "x": 4096,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-19.jpg",
+        "x": 5120,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-20.jpg",
+        "x": 6144,
+        "y": 2048,
+        "width": 857,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-21.jpg",
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-22.jpg",
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-23.jpg",
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-24.jpg",
+        "x": 3072,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-25.jpg",
+        "x": 4096,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-26.jpg",
+        "x": 5120,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-27.jpg",
+        "x": 6144,
+        "y": 3072,
+        "width": 857,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-28.jpg",
+        "x": 0,
+        "y": 4096,
+        "width": 1024,
+        "height": 571
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-29.jpg",
+        "x": 1024,
+        "y": 4096,
+        "width": 1024,
+        "height": 571
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-30.jpg",
+        "x": 2048,
+        "y": 4096,
+        "width": 1024,
+        "height": 571
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-31.jpg",
+        "x": 3072,
+        "y": 4096,
+        "width": 1024,
+        "height": 571
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-32.jpg",
+        "x": 4096,
+        "y": 4096,
+        "width": 1024,
+        "height": 571
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-33.jpg",
+        "x": 5120,
+        "y": 4096,
+        "width": 1024,
+        "height": 571
+      },
+      {
+        "src": "/Lumen/b8d248c8bdff41949802-2d4b9cea87c4-tile-34.jpg",
+        "x": 6144,
+        "y": 4096,
+        "width": 857,
+        "height": 571
+      }
+    ],
     "metadata": {
       "camera": "SONY ILCE-7CM2",
       "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
@@ -232,10 +2839,257 @@
     "title": "DSC05413",
     "capturedAt": "2026-05-04T11:52:11",
     "date": "2026-05-04",
-    "preview": "/Lumen/4dd64399b970e1961a4b-preview.webp",
-    "original": "/Lumen/4dd64399b970e1961a4b.jpg?v=sequential-1",
+    "preview": "/Lumen/4dd64399b970e1961a4b-preview.webp?v=e9f9dcfc83ed",
+    "original": "/Lumen/4dd64399b970e1961a4b.jpg?v=sequential-1-e9f9dcfc83ed",
     "width": 4672,
     "height": 7008,
+    "originalTiles": [
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-0.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-1.jpg",
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-2.jpg",
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-3.jpg",
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-4.jpg",
+        "x": 4096,
+        "y": 0,
+        "width": 576,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-5.jpg",
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-6.jpg",
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-7.jpg",
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-8.jpg",
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-9.jpg",
+        "x": 4096,
+        "y": 1024,
+        "width": 576,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-10.jpg",
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-11.jpg",
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-12.jpg",
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-13.jpg",
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-14.jpg",
+        "x": 4096,
+        "y": 2048,
+        "width": 576,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-15.jpg",
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-16.jpg",
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-17.jpg",
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-18.jpg",
+        "x": 3072,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-19.jpg",
+        "x": 4096,
+        "y": 3072,
+        "width": 576,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-20.jpg",
+        "x": 0,
+        "y": 4096,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-21.jpg",
+        "x": 1024,
+        "y": 4096,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-22.jpg",
+        "x": 2048,
+        "y": 4096,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-23.jpg",
+        "x": 3072,
+        "y": 4096,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-24.jpg",
+        "x": 4096,
+        "y": 4096,
+        "width": 576,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-25.jpg",
+        "x": 0,
+        "y": 5120,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-26.jpg",
+        "x": 1024,
+        "y": 5120,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-27.jpg",
+        "x": 2048,
+        "y": 5120,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-28.jpg",
+        "x": 3072,
+        "y": 5120,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-29.jpg",
+        "x": 4096,
+        "y": 5120,
+        "width": 576,
+        "height": 1024
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-30.jpg",
+        "x": 0,
+        "y": 6144,
+        "width": 1024,
+        "height": 864
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-31.jpg",
+        "x": 1024,
+        "y": 6144,
+        "width": 1024,
+        "height": 864
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-32.jpg",
+        "x": 2048,
+        "y": 6144,
+        "width": 1024,
+        "height": 864
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-33.jpg",
+        "x": 3072,
+        "y": 6144,
+        "width": 1024,
+        "height": 864
+      },
+      {
+        "src": "/Lumen/4dd64399b970e1961a4b-e9f9dcfc83ed-tile-34.jpg",
+        "x": 4096,
+        "y": 6144,
+        "width": 576,
+        "height": 864
+      }
+    ],
     "metadata": {
       "camera": "SONY ILCE-7CM2",
       "lens": "20-200mm F3.5-6.3 DG | Contemporary 025",
