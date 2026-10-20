@@ -68,15 +68,35 @@ export async function buildLumen() {
       }).format((await stat(file)).mtime).replace(' ', 'T');
       const capturedAt = match ? `${match[1]}-${match[2]}-${match[3]}T${match[4]}:${match[5]}:${match[6]}` : fallback;
       const id = createHash('sha256').update(relative).digest('hex').slice(0, 20);
-      const pipeline = sharp(file).rotate().flatten({ background: '#fff' }).toColourspace('srgb');
+      const { data, info } = await sharp(file).rotate().flatten({ background: '#fff' }).toColourspace('srgb')
+        .raw().toBuffer({ resolveWithObject: true });
+      const pipeline = sharp(data, { raw: { width: info.width, height: info.height, channels: info.channels } });
       // Sequential JPEG can paint decoded rows over the preview while downloading.
       const original = await pipeline.clone().jpeg({ quality: 95, progressive: false, mozjpeg: false }).toFile(path.join(output, `${id}.jpg`));
       await pipeline.clone().resize({ width: 720, height: 720, fit: 'inside', withoutEnlargement: true })
         .webp({ lossless: true, effort: 4 }).toFile(path.join(output, `${id}-preview.webp`));
+      // Align square tiles to JPEG MCU boundaries, with at most 8 by 8 tiles.
+      const tileSize = Math.ceil(Math.max(1024, info.width / 8, info.height / 8) / 16) * 16;
+      const revision = createHash('sha256').update(data).update(JSON.stringify({
+        version: 2, width: info.width, height: info.height, channels: info.channels, tileSize,
+        jpeg: { quality: 95, progressive: false, mozjpeg: false },
+        preview: { maxEdge: 720, lossless: true, effort: 4 },
+      })).digest('hex').slice(0, 12);
+      const originalTiles = [];
+      for (let y = 0; y < info.height; y += tileSize) {
+        for (let x = 0; x < info.width; x += tileSize) {
+          const width = Math.min(tileSize, info.width - x);
+          const height = Math.min(tileSize, info.height - y);
+          const filename = `${id}-${revision}-tile-${originalTiles.length}.jpg`;
+          await pipeline.clone().extract({ left: x, top: y, width, height })
+            .jpeg({ quality: 95, progressive: false, mozjpeg: false }).toFile(path.join(output, filename));
+          originalTiles.push({ src: `/Lumen/${filename}`, x, y, width, height });
+        }
+      }
       // Bypass cached progressive originals when switching to sequential encoding.
       photos.push({ id, title: path.parse(file).name, capturedAt, date: capturedAt.slice(0, 10),
-        preview: `/Lumen/${id}-preview.webp`, original: `/Lumen/${id}.jpg?v=sequential-1`,
-        width: original.width, height: original.height, ...(metadata ? { metadata } : {}) });
+        preview: `/Lumen/${id}-preview.webp?v=${revision}`, original: `/Lumen/${id}.jpg?v=sequential-1-${revision}`,
+        width: original.width, height: original.height, originalTiles, ...(metadata ? { metadata } : {}) });
     } catch (error) {
       throw new Error(`处理照片失败：${relative} — ${error.message}`, { cause: error });
     }
